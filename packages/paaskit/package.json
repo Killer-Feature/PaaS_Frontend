@@ -32,6 +32,7 @@
     ".": {
       "import": "./dist/paaskit.es.js",
       "require": "./dist/paaskit.umd.js"
-    }
+    },
+    "./style.css": "./dist/style.css"
   }
 }
