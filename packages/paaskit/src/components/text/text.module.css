@@ -1,0 +1,30 @@
+.main {
+    font-family: 'Inter', sans-serif;
+    color: #3E3E3E;
+}
+
+.p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.pDesc {
+    font-size: 20px;
+    font-weight: 400;
+    color: #475467;
+}
+
+.h1 {
+    font-size: 60px;
+    font-weight: 500;
+}
+
+.h2 {
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.h3 {
+    font-size: 24px;
+    font-weight: 500;
+}
