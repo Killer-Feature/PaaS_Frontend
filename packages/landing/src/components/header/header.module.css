@@ -1,0 +1,31 @@
+.block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    max-width: 1512px;
+    width: 100%;
+    padding: 0px 128px;
+    margin: 0 128px 0 128px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    z-index: 100;
+    width: 100%;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    gap: 30px;
+    height: 40px;
+}

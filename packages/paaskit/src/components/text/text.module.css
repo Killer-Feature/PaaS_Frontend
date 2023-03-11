@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
 .main {
     font-family: 'Inter', sans-serif;
     color: #3E3E3E;
@@ -11,6 +13,12 @@
 .pDesc {
     font-size: 20px;
     font-weight: 400;
+    color: #475467;
+}
+
+.menu {
+    font-size: 16px;
+    font-weight: 500;
     color: #475467;
 }
 

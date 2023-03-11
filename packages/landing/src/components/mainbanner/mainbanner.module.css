@@ -1,0 +1,36 @@
+.block {
+    margin-top: 80px;
+    border-top: 1px solid #E0E0E0;
+    border-bottom: 1px solid #E0E0E0;
+    width: 100%;
+    height: calc(100vh - 80px);
+    position: relative;
+    overflow: hidden;
+}
+
+.img {
+    position: absolute;
+    bottom: -35vh;
+    left: 50%;
+    margin-left: -877px;
+    width: 1755px;
+    z-index: 1;
+}
+
+.textBlock {
+    z-index: 2;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: calc(50vh);
+    text-align: center;
+}
+
+.desc {
+    max-width: 911px;
+    word-wrap: break-word;
+}
