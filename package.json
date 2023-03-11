@@ -1,0 +1,12 @@
+{
+  "name": "paasfrontend",
+  "version": "1.0.0",
+  "license": "MIT",
+  "workspaces": [
+    "packages/*"
+  ],
+  "packageManager": "yarn@3.4.1",
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}

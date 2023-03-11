@@ -1,0 +1,17 @@
+{
+  "exclude": [
+    "packages/**/tests/**",
+    "packages/**/dist/**"
+  ],
+  "references": [
+    {
+      "path": "./packages/adminpanel"
+    },
+    {
+      "path": "./packages/landing"
+    },
+    {
+      "path": "./packages/paaskit"
+    }
+  ]
+}
