@@ -10,7 +10,7 @@
 
 .img {
     position: absolute;
-    bottom: -35vh;
+    top: calc(50vh - 200px);
     left: 50%;
     margin-left: -877px;
     width: 1755px;
