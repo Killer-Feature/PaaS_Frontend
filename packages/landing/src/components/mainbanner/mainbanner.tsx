@@ -13,6 +13,7 @@ const MainBanner: React.FunctionComponent = () => {
                 </div>
             </div>
             <MacBook />
+            <div className={style.gardient} />
         </div>
     );
 };

@@ -24,3 +24,12 @@
     max-width: 911px;
     word-wrap: break-word;
 }
+
+.gardient {
+    position: absolute;
+    z-index: 0;
+    top: 15vh;
+    width: 100vw;
+    height: 130vh;
+    background: radial-gradient(56.52% 45.52% at 49.97% 53.01%, #BFAAEC 0%, rgba(255, 255, 255, 0) 100%);
+}
