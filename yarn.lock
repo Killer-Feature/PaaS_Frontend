@@ -683,6 +683,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^18.15.3":
+  version: 18.15.3
+  resolution: "@types/node@npm:18.15.3"
+  checksum: 31b1d92475a82c30de29aa6c0771b18a276552d191283b4423ba2d61b3f01159bf0d02576c0b7cc834b043997893800db6bb47f246083ed85aa45e79c80875d7
+  languageName: node
+  linkType: hard
+
 "@types/prop-types@npm:*":
   version: 15.7.5
   resolution: "@types/prop-types@npm:15.7.5"
@@ -1988,6 +1995,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "paaskit@workspace:packages/paaskit"
   dependencies:
+    "@types/node": ^18.15.3
     "@types/react": ^18.0.27
     "@types/react-dom": ^18.0.10
     "@vitejs/plugin-react": ^3.1.0

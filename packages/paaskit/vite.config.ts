@@ -8,13 +8,15 @@ export default defineConfig({
         react(),
         dts({
             insertTypesEntry: true,
+            noEmitOnError: true,
+            skipDiagnostics: true,
         }),
     ],
     build: {
         lib: {
             entry: path.resolve(__dirname, 'src/index.ts'),
             name: 'paaskit',
-            formats: ['es', 'umd'],
+            formats: ['es'],
             fileName: (format) => `paaskit.${format}.js`,
         },
         rollupOptions: {
