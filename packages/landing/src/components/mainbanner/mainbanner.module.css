@@ -7,15 +7,6 @@
     overflow: hidden;
 }
 
-.img {
-    position: absolute;
-    top: calc(50vh - 200px);
-    left: 50%;
-    margin-left: -877px;
-    width: 1755px;
-    z-index: 1;
-}
-
 .textBlock {
     z-index: 2;
     position: absolute;
@@ -25,7 +16,7 @@
     align-items: center;
     gap: 20px;
     width: 100%;
-    height: calc(50vh);
+    height: calc(40vh);
     text-align: center;
 }
 

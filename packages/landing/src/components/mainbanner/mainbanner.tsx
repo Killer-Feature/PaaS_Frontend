@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text } from 'paaskit';
-import macBook from '../../assets/macbook.jpeg';
+import MacBook from '../macbook/macbook';
 import style from './mainbanner.module.css';
 
 const MainBanner: React.FunctionComponent = () => {
@@ -12,7 +12,7 @@ const MainBanner: React.FunctionComponent = () => {
                     <Text type='pDesc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</Text>
                 </div>
             </div>
-            <img src={macBook} className={style.img} alt="MacBook" />
+            <MacBook />
         </div>
     );
 };

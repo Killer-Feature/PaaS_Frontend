@@ -1,0 +1,23 @@
+.block {
+    --macbook-size: 1500px;
+    --border-margin: calc(var(--macbook-size) * 0.01593);
+
+    position: absolute;
+    top: calc(40vh);
+    left: 50%;
+    margin-left: calc(var(--macbook-size) / -2);
+    width: var(--macbook-size);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.svg {
+    width: 100%;
+}
+
+.img {
+    position: absolute;
+    top: calc(var(--border-margin) * 2);
+    left: var(--border-margin);
+    width: calc(100% - 2 * var(--border-margin));
+}
