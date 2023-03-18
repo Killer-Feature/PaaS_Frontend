@@ -1,6 +1,6 @@
 .block {
     --macbook-size: var(--size_width-max);
-    --border-margin: calc(var(--macbook-size) * 0.017);
+    --border-margin: calc(var(--macbook-size) * 0.013);
 
     position: absolute;
     top: var(--size-banner-text-height);
