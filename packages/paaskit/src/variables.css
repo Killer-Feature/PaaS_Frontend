@@ -2,4 +2,8 @@
 
 :root {
     --color_secondary-bg: #e0e0e054;
+    --color_primary: #6941c6;
+    --color_primary-bg: #f9f5ff;
+
+    color: #3E3E3E;
 }
