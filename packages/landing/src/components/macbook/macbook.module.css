@@ -1,9 +1,9 @@
 .block {
-    --macbook-size: 1500px;
-    --border-margin: calc(var(--macbook-size) * 0.01593);
+    --macbook-size: 80vw;
+    --border-margin: calc(var(--macbook-size) * 0.017);
 
     position: absolute;
-    top: calc(40vh);
+    top: calc(45vh);
     left: 50%;
     margin-left: calc(var(--macbook-size) / -2);
     width: var(--macbook-size);
@@ -17,7 +17,7 @@
 
 .img {
     position: absolute;
-    top: calc(var(--border-margin) * 2);
+    top: calc(var(--border-margin));
     left: var(--border-margin);
     width: calc(100% - 2 * var(--border-margin));
 }

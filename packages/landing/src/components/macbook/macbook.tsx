@@ -1,6 +1,6 @@
 import React from 'react';
 import svg from '../../assets/macbook.svg';
-import img from '../../assets/site-screen.png';
+import img from '../../assets/hh.png';
 import style from './macbook.module.css';
 
 const MacBook = () => {
