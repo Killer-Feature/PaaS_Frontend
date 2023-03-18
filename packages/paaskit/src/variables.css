@@ -5,5 +5,13 @@
     --color_primary: #6941c6;
     --color_primary-bg: #f9f5ff;
 
-    color: #3E3E3E;
+    --size_width-max: 80vw;
+
+    color: #3e3e3e;
 }
+
+/* @media (min-width: 1024px) {
+    :root {
+      --h1-color: red;
+    }
+} */
