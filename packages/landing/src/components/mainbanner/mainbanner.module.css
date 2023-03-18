@@ -1,5 +1,5 @@
 .block {
-    margin-top: 80px;
+    margin-top: var(--size-header-height);
     border-bottom: 1px solid var(--color_secondary-bg);
     width: 100%;
     height: calc(100vh - 80px);

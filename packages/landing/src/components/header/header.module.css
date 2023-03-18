@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: var(--size-header-height);
     max-width: var(--size_width-max);
     width: 100%;
     padding: 0px 128px;
