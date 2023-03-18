@@ -1,5 +1,5 @@
 .block {
-    --macbook-size: 80vw;
+    --macbook-size: var(--size_width-max);
     --border-margin: calc(var(--macbook-size) * 0.017);
 
     position: absolute;
