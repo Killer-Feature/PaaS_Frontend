@@ -1,0 +1,30 @@
+.block {
+    --height: 32px;
+    height: calc(var(--height) - 8px);
+    background-color: var(--color_primary-bg);
+    border-radius: calc(var(--height) / 2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color_primary);
+    padding: 4px;
+}
+
+.icon {
+    margin: 0 7.33px;
+    color: #9e77ed;
+}
+
+.left {
+    background-color: white;
+    line-height: calc(var(--height) - 8px);
+    padding: 0 10px;
+    border-radius: calc(var(--height) / 2 - 4px);
+}
+
+.right {
+    cursor: pointer;
+}

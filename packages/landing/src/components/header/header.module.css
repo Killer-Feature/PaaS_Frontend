@@ -30,3 +30,14 @@
     gap: 30px;
     height: 40px;
 }
+
+.line {
+    background-color: var(--color_secondary-bg);
+    width: 1px;
+    height: 30px;
+}
+
+.github {
+    height: 25px;
+    fill: #4d5865;
+}
