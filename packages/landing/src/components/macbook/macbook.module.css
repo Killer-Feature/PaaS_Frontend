@@ -3,7 +3,7 @@
     --border-margin: calc(var(--macbook-size) * 0.017);
 
     position: absolute;
-    top: calc(45vh);
+    top: var(--size-banner-text-height);
     left: 50%;
     margin-left: calc(var(--macbook-size) / -2);
     width: var(--macbook-size);
