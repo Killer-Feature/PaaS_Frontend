@@ -2,7 +2,7 @@
     margin-top: var(--size-header-height);
     border-bottom: 1px solid var(--color_secondary-bg);
     width: 100%;
-    height: calc(100vh - 80px);
+    height: calc(100vh - var(--size-header-height));
     position: relative;
     overflow: hidden;
 }
