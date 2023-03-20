@@ -18,7 +18,7 @@ const PurpleLinks = (props: Props) => (
             </Text>
         </div>
         {props.text2 &&
-            <div className={style.right}>
+            <div className={style.link}>
                 <Text>
                     {props.text2}
                     <FontAwesomeIcon className={style.icon} icon={faArrowRight} />

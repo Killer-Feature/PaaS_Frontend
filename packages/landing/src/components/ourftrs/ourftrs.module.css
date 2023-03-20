@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     gap: 11px;
-    padding: 70px;
+    padding: 70px 0 90px;
     text-align: center;
 }
 
@@ -18,11 +18,11 @@
     flex-wrap: wrap;
     gap: 20px;
     width: var(--size_width-max);
-    margin-top: 89px;
+    margin-top: 64px;
 }
 
 .ftrsPart {
     width: calc((100% - 40px) / 3);
-    height: 250px;
+    height: 220px;
     background-color: #f5f5f5;
 }
