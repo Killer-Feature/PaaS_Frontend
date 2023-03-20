@@ -6,23 +6,25 @@ import Text from '../text/text';
 interface Props {
     text1: string,
     link1?: string,
-    text2: string,
+    text2?: string,
     link2?: string,
 };
 
 const PurpleLinks = (props: Props) => (
     <div className={style.block}>
-        <div className={style.left}>
+        <div className={style.left + (props.text2 ? ' ' + style.bgWhite : '')}>
             <Text>
                 {props.text1}
             </Text>
         </div>
-        <div className={style.right}>
-            <Text>
-                {props.text2}
-                <FontAwesomeIcon className={style.icon} icon={faArrowRight} />
-            </Text>
-        </div>
+        {props.text2 &&
+            <div className={style.right}>
+                <Text>
+                    {props.text2}
+                    <FontAwesomeIcon className={style.icon} icon={faArrowRight} />
+                </Text>
+            </div>
+        }
     </div>
 );
 

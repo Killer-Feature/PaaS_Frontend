@@ -3,6 +3,7 @@ import { Text } from 'paaskit';
 import Header from './components/header/header';
 import MainBanner from './components/mainbanner/mainbanner';
 import SSHForm from './components/sshform/sshform';
+import OurFtrs from './components/ourftrs/ourftrs';
 import './App.css';
 import 'paaskit/style.css';
 import 'react-notifications-component/dist/theme.css';
@@ -14,6 +15,7 @@ function App() {
 			<ReactNotifications/>
 			<Header/>
 			<MainBanner/>
+			<OurFtrs />
 			<SSHForm />
 		</>
 	)
