@@ -17,7 +17,7 @@
 
 .img {
     position: absolute;
-    top: calc(var(--border-margin));
+    top: calc(var(--border-margin) * 2);
     left: var(--border-margin);
     width: calc(100% - 2 * var(--border-margin));
 }

@@ -1,6 +1,5 @@
 import { useState } from 'react';
-import { Text } from 'paaskit';
-import Header from './components/header/header';
+import { Text, Header } from 'paaskit';
 import MainBanner from './components/mainbanner/mainbanner';
 import SSHForm from './components/sshform/sshform';
 import OurFtrs from './components/ourftrs/ourftrs';
@@ -13,7 +12,12 @@ function App() {
 	return (
 		<>
 			<ReactNotifications/>
-			<Header/>
+			<Header>
+				<Text type='menu'>О нас</Text>
+				<Text type='menu'>Быстрый старт</Text>
+				<Text type='menu'>Документация</Text>
+				<Text type='menu'>Контакты</Text>
+			</Header>
 			<MainBanner/>
 			<OurFtrs />
 			<SSHForm />
