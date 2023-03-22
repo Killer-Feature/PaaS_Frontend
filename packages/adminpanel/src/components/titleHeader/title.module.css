@@ -1,0 +1,10 @@
+.block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+}
+
+.color {
+    color: #101828;
+}
