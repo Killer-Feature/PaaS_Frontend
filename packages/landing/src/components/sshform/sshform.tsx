@@ -17,7 +17,7 @@ const SSHForm: React.FunctionComponent = () => {
             password: event.target.elements.password.value,
         };
         try {
-                await fetch('http://localhost:8090/deploy-app', {
+            await fetch('http://localhost:8090/deploy-app', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
