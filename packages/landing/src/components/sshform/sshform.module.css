@@ -20,9 +20,15 @@
 }
 
 .form > input {
-    padding: 12px 40px;
+    padding: 12px 25px;
+    width: 450px;
     border-radius: 10px;
-    width: 200px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 400;
+    background-color: #efefef;
 }
 
 .submit {

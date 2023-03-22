@@ -15,7 +15,7 @@ const Table = () => {
     const [data, setData] = useState<Data>([]);
 
     useEffect(() => {
-        fetch('http://localhost:8090/deploy-app', {
+        fetch('http://localhost:8091/deploy-app', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -27,16 +27,16 @@ const Table = () => {
                 
             })
             .catch(() =>{
-                setData([
-                    {
-                        name: 'Моя любимая тачка',
-                        ip: '192.168.2.150',
-                    },
-                    {
-                        name: 'Моя не любимая тачка',
-                        ip: '192.168.2.152',
-                    },
-                ]);
+                // setData([
+                //     {
+                //         name: 'Моя любимая тачка',
+                //         ip: '192.168.2.150',
+                //     },
+                //     {
+                //         name: 'Моя не любимая тачка',
+                //         ip: '192.168.2.152',
+                //     },
+                // ]);
             });
     }, []);
 
@@ -48,6 +48,13 @@ const Table = () => {
             <div className={style.head + ' ' + style.border}><Text type={'tableHead'}>Ссылка на дашборд</Text></div>
             <div className={style.head + ' ' + style.border}><Text type={'tableHead'}>Название кластера</Text></div>
             <div className={style.head + ' ' + style.border}></div>
+
+            {data.length === 0 &&
+                <div className={style.empty}>
+                    Подключенные тачки отсутвуют
+                </div>
+            }
+
             {data.map((el, i) => {
                 return (
                     <>
