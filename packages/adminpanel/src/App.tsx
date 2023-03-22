@@ -20,8 +20,8 @@ function App() {
 			<div className={style.root}>
 				<div className={style.block}>
 					<div className={style.title}>
-						<Title desc={'Тут находится основная информация о вашем кластере и его ресурсах'}>
-							Общая панель управления
+						<Title desc={'Тут находится список текущих машин вашего кластера'}>
+							Состояние кластера
 						</Title>
 						<Button callback={() => {}}>
 							<img src={plus} alt={'plus'} />
