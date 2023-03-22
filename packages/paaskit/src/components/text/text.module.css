@@ -41,3 +41,8 @@
     font-size: 30px;
     line-height: 36px;
 }
+
+.button {
+    font-weight: 600;
+    font-size: 14px;
+}

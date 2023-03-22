@@ -1,11 +1,16 @@
 import React from 'react';
 import style from './button.module.css';
 
-const MyButton: React.FunctionComponent<{msg: string}> = ({ msg }) => {
+type Props = {
+    children: React.ReactNode,
+	callback: (data: any) => void,
+};
+
+const MyButton: React.FC<Props> = ({ children, callback }) => {
 	return (
-		<p className={style.test}>
-			<b>{msg}</b> - привет!1!1
-		</p>
+		<div onClick={callback} className={style.block}>
+			{children}
+		</div>
 	);
 };
 
