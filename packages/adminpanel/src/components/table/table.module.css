@@ -5,7 +5,7 @@
     border: 1px solid #EAECF0;
     display: grid;
     border-radius: 12px;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 0.6fr 1.3fr 1.2fr 0.6fr;
 }
 
 .head {
@@ -27,4 +27,41 @@
     justify-content: left;
     align-items: center;
     padding: 0 24px;
+    gap: 12px;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 1000px;
+}
+
+.iconGreen {
+    background: #CCFBEF;
+}
+
+.iconGray {
+    background: #EAECF5;
+}
+
+.status {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1px 8px;
+    border: 2px solid #039855;
+    border-radius: 16px;
+    color: #039855;
+}
+
+.actions {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding: 0 28px;
+    gap: 20px;
 }
