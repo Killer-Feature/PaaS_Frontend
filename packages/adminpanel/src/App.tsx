@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
+import plus from './assets/plus.svg'
 import viteLogo from '/vite.svg'
-import { Text, Header } from 'paaskit';
+import { Text, Header, Button } from 'paaskit';
 import Title from './components/titleHeader/titleHeader';
 import 'paaskit/style.css';
 import style from './app.module.css';
@@ -23,6 +23,10 @@ function App() {
 						<Title desc={'Тут находится основная информация о вашем кластере и его ресурсах'}>
 							Общая панель управления
 						</Title>
+						<Button callback={() => {}}>
+							<img src={plus} alt={'plus'} />
+							<span>Добавить</span>
+						</Button>
 					</div>
 				</div>
 			</div>
