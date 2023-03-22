@@ -3,6 +3,7 @@ import plus from './assets/plus.svg'
 import viteLogo from '/vite.svg'
 import { Text, Header, Button } from 'paaskit';
 import Title from './components/titleHeader/titleHeader';
+import Table from './components/table/table';
 import 'paaskit/style.css';
 import style from './app.module.css';
 import './variables.css';
@@ -28,6 +29,7 @@ function App() {
 							<span>Добавить</span>
 						</Button>
 					</div>
+					<Table />
 				</div>
 			</div>
 		</>
