@@ -85,7 +85,7 @@ const Table = () => {
                             </div>
                         </div>
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line}>
-                            <a href={'http://' + el.ip.split(':')[0] + ':3000/'}>
+                            <a className={style.link} href={'http://' + el.ip.split(':')[0] + ':3000/'}>
                                 <Text type={'tableDesc'}>
                                     {'http://' + el.ip.split(':')[0] + ':3000/'}
                                 </Text>

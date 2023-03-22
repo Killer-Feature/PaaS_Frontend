@@ -3,7 +3,7 @@ import style from './button.module.css';
 
 type Props = {
     children: React.ReactNode,
-	callback: (data: any) => void,
+	callback?: (data: any) => void,
 };
 
 const MyButton: React.FC<Props> = ({ children, callback }) => {

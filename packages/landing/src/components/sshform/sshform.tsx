@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text } from 'paaskit';
+import { Text, Button } from 'paaskit';
 import style from './sshform.module.css';
 import { Store } from 'react-notifications-component';
 
@@ -51,7 +51,10 @@ const SSHForm: React.FunctionComponent = () => {
                 <input type='text' name='port' placeholder='Port'></input>
                 <input type='text' name='user' placeholder='Пользователь'></input>
                 <input type='password' name='password' placeholder='Пароль'></input>
-                <input type='submit'></input>
+                <input type='submit' className={style.submit} id={'pzd-reshenie'}></input>
+                <Button callback={() => document.getElementById('pzd-reshenie')?.click()}>
+                    Развернуть систему
+                </Button>
             </form>
         </div>
     );
