@@ -12,7 +12,7 @@ const SSHForm: React.FunctionComponent = () => {
 
         const data = {
             ip: event.target.elements.ip.value,
-            port: event.target.elements.port.value,
+            port: Number(event.target.elements.port.value),
             user: event.target.elements.user.value,
             password: event.target.elements.password.value,
         };

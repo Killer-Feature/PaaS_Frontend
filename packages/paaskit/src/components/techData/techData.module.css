@@ -1,0 +1,70 @@
+.block {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px;
+    gap: 20px;
+    border-radius: 12px;
+    flex: none;
+    flex-grow: 0;
+    order: 0;
+}
+
+.blockPurple {
+    background: #F9F5FF;
+}
+
+.blockGray {
+    background: #F8F9FC;
+}
+
+.blockBlue {
+    background: #F0F9FF;
+}
+
+.blockGreen {
+    background: #F5FBEE;
+}
+
+.blockAqua {
+    background: #F0FDF9;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    border-radius: 1000px;
+}
+
+.iconPurple {
+    background: #F4EBFF;
+    fill: #6941C6;
+}
+
+.iconGray {
+    background: #EAECF5;
+    fill: #363F72;
+}
+
+.iconBlue {
+    background: #E0F2FE;
+    fill: #026AA2;
+}
+
+.iconGreen {
+    background: #E6F4D7;
+    fill: #3F621A;
+}
+
+.iconAqua {
+    background: #CCFBEF;
+    fill: #107569;
+}
+
+.text {
+    text-align: center;
+}

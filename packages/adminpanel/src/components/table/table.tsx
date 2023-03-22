@@ -15,7 +15,7 @@ const Table = () => {
     const [data, setData] = useState<Data>([]);
 
     useEffect(() => {
-        fetch('http://localhost:8091/deploy-app', {
+        fetch('http://localhost:8091/api/getClusterNodes', {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -27,16 +27,24 @@ const Table = () => {
                 
             })
             .catch(() =>{
-                // setData([
-                //     {
-                //         name: 'Моя любимая тачка',
-                //         ip: '192.168.2.150',
-                //     },
-                //     {
-                //         name: 'Моя не любимая тачка',
-                //         ip: '192.168.2.152',
-                //     },
-                // ]);
+                setData([
+                    {
+                        name: 'Моя любимая тачка',
+                        ip: '192.168.2.150',
+                    },
+                    {
+                        name: 'Моя не любимая тачка',
+                        ip: '192.168.2.152',
+                    },
+                    {
+                        name: 'Моя сойдет любимая тачка',
+                        ip: '192.168.2.153',
+                    },
+                    {
+                        name: 'Моя норм тачка',
+                        ip: '192.168.2.154',
+                    },
+                ]);
             });
     }, []);
 

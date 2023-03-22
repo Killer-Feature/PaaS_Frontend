@@ -7,6 +7,7 @@ import Table from './components/table/table';
 import 'paaskit/style.css';
 import style from './app.module.css';
 import './variables.css';
+import TechMetrics from './components/techMetrics/techMetrics';
 
 function App() {
 	return (
@@ -20,6 +21,12 @@ function App() {
 			</Header>
 			<div className={style.root}>
 				<div className={style.block}>
+					<div className={style.title}>
+						<Title desc={'Тут находится основная информация о вашем кластере и его ресурсах'}>
+							Общая панель управления
+						</Title>
+					</div>
+					<TechMetrics />
 					<div className={style.title}>
 						<Title desc={'Тут находится список текущих машин вашего кластера'}>
 							Состояние кластера
