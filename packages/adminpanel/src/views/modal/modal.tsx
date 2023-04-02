@@ -1,5 +1,6 @@
 import ModalState, { State } from '../../models/modal';
 import {observer} from 'mobx-react-lite';
+import style from './modal.module.css';
 
 const Modal = observer(() => {
     if (ModalState.state === State.Close) {
@@ -7,7 +8,7 @@ const Modal = observer(() => {
     };
 
     return (
-        <div>
+        <div className={style.block}>
 
         </div>
     );
