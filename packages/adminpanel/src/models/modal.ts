@@ -14,7 +14,7 @@ export enum Modals {
 class Modal {
     state: State = State.Close;
     type: null | Modals = null;
-    readonly duration = 500;
+    readonly duration = 300;
 
     constructor() {
         makeAutoObservable(this);

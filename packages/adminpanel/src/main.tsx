@@ -8,10 +8,16 @@ import style from './app.module.css';
 import './variables.css';
 import IndexPage from './views/index/index';
 import Modal from './views/modal/modal';
+import ModalState, { State } from './models/modal';
+import {observer} from 'mobx-react-lite';
 
-function App() {
+const App = observer(() => {
 	return (
-		<>
+		<div className={
+			((ModalState.state === State.Opening) ? style.modalOpening : '')
+			+ ((ModalState.state === State.Closing) ? (' ' + style.modalClosing) : '')
+			+ ((ModalState.state === State.Open) ? (' ' + style.modalOpen) : '')
+		}>
 			<Header>
 				<Text type='menu'>Главная</Text>
 				<Text type='menu'>Кластер</Text>
@@ -24,10 +30,9 @@ function App() {
 					<Outlet />
 				</div>
 			</div>
-			<Modal />
-		</>
+		</div>
 	);
-}
+});
 
 const router = createBrowserRouter(createRoutesFromElements(
 	<Route path='/' element={<App />} >
@@ -39,5 +44,6 @@ const router = createBrowserRouter(createRoutesFromElements(
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
 	<React.StrictMode>
 		<RouterProvider router={router} />
+		<Modal />
 	</React.StrictMode>,
 )

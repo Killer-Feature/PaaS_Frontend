@@ -13,7 +13,11 @@ const Modal = observer(() => {
             + ((ModalState.state === State.Opening) ?  (' ' + style.backgroundOpening) : '')
             + ((ModalState.state === State.Closing) ?  (' ' + style.backgroundClosing) : '')
         } onClick={() => ModalState.close()}>
-
+            <div className={
+                style.modal
+                + ((ModalState.state === State.Opening) ?  (' ' + style.modalOpening) : '')
+                + ((ModalState.state === State.Closing) ?  (' ' + style.modalClosing) : '')
+            } onClick={(e) => e.stopPropagation()}></div>
         </div>
     );
 });
