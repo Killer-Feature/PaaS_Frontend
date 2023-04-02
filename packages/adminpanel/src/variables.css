@@ -2,6 +2,7 @@
     --size-header-height: 70px;
     --size-banner-text-height: 46vh;
     --modal-duration: .3s;
+    --size_width-max: 1250px;
 }
 
 body {

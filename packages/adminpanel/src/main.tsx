@@ -13,11 +13,7 @@ import {observer} from 'mobx-react-lite';
 
 const App = observer(() => {
 	return (
-		<div className={
-			((ModalState.state === State.Opening) ? style.modalOpening : '')
-			+ ((ModalState.state === State.Closing) ? (' ' + style.modalClosing) : '')
-			+ ((ModalState.state === State.Open) ? (' ' + style.modalOpen) : '')
-		}>
+		<>
 			<Header>
 				<Text type='menu'>Главная</Text>
 				<Text type='menu'>Кластер</Text>
@@ -25,12 +21,18 @@ const App = observer(() => {
 				<Text type='menu'>Ресурсы</Text>
 				<Text type='menu'>Service mesh</Text>
 			</Header>
-			<div className={style.root}>
-				<div className={style.block}>
-					<Outlet />
+			<div className={
+				((ModalState.state === State.Opening) ? style.modalOpening : '')
+				+ ((ModalState.state === State.Closing) ? (' ' + style.modalClosing) : '')
+				+ ((ModalState.state === State.Open) ? (' ' + style.modalOpen) : '')
+			}>
+				<div className={style.root}>
+					<div className={style.block}>
+						<Outlet />
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 });
 
