@@ -8,7 +8,11 @@ const Modal = observer(() => {
     };
 
     return (
-        <div className={style.block}>
+        <div className={
+            style.block
+            + ((ModalState.state === State.Opening) ?  (' ' + style.backgroundOpening) : '')
+            + ((ModalState.state === State.Closing) ?  (' ' + style.backgroundClosing) : '')
+        } onClick={() => ModalState.close()}>
 
         </div>
     );

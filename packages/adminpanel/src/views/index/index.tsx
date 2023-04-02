@@ -5,6 +5,7 @@ import plus from '../../assets/plus.svg'
 import viteLogo from '/vite.svg'
 import { Text, Header, Button } from 'paaskit';
 import Table from '../../components/table/table';
+import ModalState, {Modals} from '../../models/modal';
 
 const Index = () => {
     return (
@@ -19,7 +20,7 @@ const Index = () => {
                 <Title desc={'Тут находится список текущих машин вашего кластера'}>
                     Состояние кластера
                 </Title>
-                <Button callback={() => {}}>
+                <Button callback={() => ModalState.open(Modals.NodeCreate)}>
                     <img src={plus} alt={'plus'} />
                     <span>Добавить</span>
                 </Button>

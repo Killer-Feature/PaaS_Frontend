@@ -20,7 +20,7 @@ class Modal {
         makeAutoObservable(this);
     };
 
-    set open(type: Modals) {
+    open(type: Modals) {
         this.type = type;
         this.state = State.Opening;
 
