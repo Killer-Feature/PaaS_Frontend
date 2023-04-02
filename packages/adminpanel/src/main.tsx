@@ -7,6 +7,7 @@ import 'paaskit/style.css';
 import style from './app.module.css';
 import './variables.css';
 import IndexPage from './views/index/index';
+import Modal from './views/modal/modal';
 
 function App() {
 	return (
@@ -23,6 +24,7 @@ function App() {
 					<Outlet />
 				</div>
 			</div>
+			<Modal />
 		</>
 	);
 }
