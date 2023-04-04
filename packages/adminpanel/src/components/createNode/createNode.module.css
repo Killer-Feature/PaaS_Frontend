@@ -9,3 +9,9 @@
     text-align: center;
     margin: 10px 0 4px;
 }
+
+.desc {
+    display: block;
+    width: 360px;
+    text-align: center;
+}

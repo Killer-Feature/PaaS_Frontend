@@ -20,7 +20,7 @@ const Index = () => {
                 <Title desc={'Тут находится список текущих машин вашего кластера'}>
                     Состояние кластера
                 </Title>
-                <Button callback={() => ModalState.open(Modals.NodeCreate)}>
+                <Button callback={() => ModalState.open(Modals.CreateNode)}>
                     <img src={plus} alt={'plus'} />
                     <span>Добавить</span>
                 </Button>

@@ -8,7 +8,7 @@ export enum State {
 };
 
 export enum Modals {
-    NodeCreate,
+    CreateNode,
 };
 
 class Modal {

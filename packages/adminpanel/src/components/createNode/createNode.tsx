@@ -6,9 +6,16 @@ const CreateNode = () => {
     return (
         <div className={style.block}>
             <img src={svg} alt={'Ass node icon'} />
-            <Text className={style.title} type={'modalTitle'}>
-                Введите данные сервера
-            </Text>
+            <div className={style.title}>
+                <Text type={'modalTitle'}>
+                    Введите данные сервера
+                </Text>
+            </div>
+            <div className={style.desc}>
+                <Text type={'tableDesc'}>
+                    На вашей машине должен быть установлен OpenSSH и открыт 22 порт
+                </Text>
+            </div>
         </div>
     );
 };
