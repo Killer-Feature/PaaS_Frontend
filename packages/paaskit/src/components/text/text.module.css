@@ -72,6 +72,13 @@
     line-height: 20px;
 }
 
+.errorMsg {
+    font-weight: 400;
+    font-size: 14px;
+    color: #F04438;
+    line-height: 20px;
+}
+
 .techDesc {
     font-weight: 400;
     font-size: 12px;

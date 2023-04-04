@@ -27,13 +27,44 @@ const CreateNode = () => {
 
             <form className={style.form} onSubmit={handleSubmit(() => {})}>
                 <Text type={'formLabel'}>IP адресс</Text>
-                <input className={style.input} placeholder={'192.168.0.0'} {...register('adress', {
+                <input className={style.input + (errors.adress ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'192.168.0.0'} {...register('adress', {
                     required: true,
                     pattern: /^(?!0)(?!.*\.$)((1?\d?\d|25[0-5]|2[0-4]\d)(\.|$)){4}$/i
                 })} />
-                {errors?.adress?.type === 'pattern' && (
-                    <p>Хуй те на рыло. Адресс вводить умеешь ебланище?</p>
-                )}
+                <div className={style.errorBlock}>
+                    {errors?.adress?.type === 'required' && (
+                        <Text type={'errorMsg'}>Это обязятельное для ввода поле</Text>
+                    )}
+                    {errors?.adress?.type === 'pattern' && (
+                        <Text type={'errorMsg'}>Вводите IP адреес по примеру 192.168.0.0</Text>
+                    )}
+                </div>
+
+                <Text type={'formLabel'}>Логин</Text>
+                <input className={style.input + (errors.login ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'Имя пользователя ubuntu'} {...register('login', {
+                    required: true,
+                    pattern: /^[A-Za-z]+$/i
+                })} />
+                <div className={style.errorBlock}>
+                    {errors?.login?.type === 'required' && (
+                        <Text type={'errorMsg'}>Это обязятельное для ввода поле</Text>
+                    )}
+                    {errors?.login?.type === 'pattern' && (
+                        <Text type={'errorMsg'}>Логин должен состоять из букв латинского алфавита</Text>
+                    )}
+                </div>
+                <input type="submit" style={{display: 'none'}} />
+
+                <Text type={'formLabel'}>Пароль</Text>
+                <input type={'password'} className={style.input + (errors.password ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'Пароль пользователя ubuntu'} {...register('password', {
+                    required: true,
+                })} />
+                <div className={style.errorBlock}>
+                    {errors?.password?.type === 'required' && (
+                        <Text type={'errorMsg'}>Это обязятельное для ввода поле</Text>
+                    )}
+                </div>
+                <input type="submit" style={{display: 'none'}} />
             </form>
         </div>
     );
