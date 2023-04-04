@@ -12,8 +12,8 @@ const MyButton: React.FC<Props> = ({ children, callback, type, isSec = false }) 
 	return (
 		<div onClick={callback} className={
 			style.block
-			+ type ? (' ' + style[type ?? 'block']) : ''
-			+ isSec ? (' ' + style.sec) : ''
+			+ (type ? (' ' + style[type ?? 'block']) : '')
+			+ (isSec ? (' ' + style.sec) : '')
 		}>
 			{children}
 		</div>

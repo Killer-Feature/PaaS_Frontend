@@ -1,7 +1,8 @@
 import style from './createNode.module.css';
 import svg from '../../assets/createNode.svg';
-import { Text } from 'paaskit';
+import { Text, Button } from 'paaskit';
 import { useForm } from 'react-hook-form';
+import ModalState from '../../models/modal';
 
 const CreateNode = () => {
     const {
@@ -25,7 +26,7 @@ const CreateNode = () => {
                 </Text>
             </div>
 
-            <form className={style.form} onSubmit={handleSubmit(() => {})}>
+            <form className={style.form} onSubmit={handleSubmit(ModalState.close)}>
                 <Text type={'formLabel'}>IP адресс</Text>
                 <input className={style.input + (errors.adress ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'192.168.0.0'} {...register('adress', {
                     required: true,
@@ -64,6 +65,16 @@ const CreateNode = () => {
                         <Text type={'errorMsg'}>Это обязятельное для ввода поле</Text>
                     )}
                 </div>
+
+                <div className={style.buttons}>
+                    <Button type={'input'} isSec callback={() => ModalState.close()}>
+                        Отмена
+                    </Button>
+                    <Button type={'input'} callback={handleSubmit(() => ModalState.close())}>
+                        Добавить
+                    </Button>
+                </div>
+
                 <input type="submit" style={{display: 'none'}} />
             </form>
         </div>
