@@ -1,6 +1,7 @@
 import ModalState, { State } from '../../models/modal';
 import {observer} from 'mobx-react-lite';
 import style from './modal.module.css';
+import close from '../../assets/close.svg';
 
 const Modal = observer(() => {
     if (ModalState.state === State.Close) {
@@ -17,7 +18,10 @@ const Modal = observer(() => {
                 style.modal
                 + ((ModalState.state === State.Opening) ?  (' ' + style.modalOpening) : '')
                 + ((ModalState.state === State.Closing) ?  (' ' + style.modalClosing) : '')
-            } onClick={(e) => e.stopPropagation()}></div>
+            } onClick={(e) => e.stopPropagation()}>
+                
+                <img src={close} className={style.close} alt={'Close icon'} onClick={() => ModalState.close()} />
+            </div>
         </div>
     );
 });

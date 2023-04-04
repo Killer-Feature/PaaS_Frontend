@@ -69,3 +69,10 @@
     font-weight: 400;
     font-size: 12px;
 }
+
+.modalTitle {
+    font-weight: 600;
+    font-size: 18px;
+    color: #101828;
+    line-height: 28px;
+}
