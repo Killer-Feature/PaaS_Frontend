@@ -58,6 +58,13 @@
     line-height: 20px;
 }
 
+.formLabel {
+    font-weight: 500;
+    font-size: 14px;
+    color: #344054;
+    line-height: 20px;
+}
+
 .tableDesc {
     font-weight: 400;
     font-size: 14px;

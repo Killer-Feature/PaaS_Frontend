@@ -28,7 +28,12 @@ const Modal = observer(() => {
             } onClick={(e) => e.stopPropagation()}>
                 <CurrnetModal />
 
-                <img src={close} className={style.close} alt={'Close icon'} onClick={() => ModalState.close()} />
+                <img
+                    src={close}
+                    className={style.close}
+                    alt={'Close icon'}
+                    onClick={() => ModalState.close()}
+                />
             </div>
         </div>
     );
