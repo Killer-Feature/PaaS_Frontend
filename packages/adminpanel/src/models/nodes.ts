@@ -1,9 +1,13 @@
 import {makeAutoObservable, runInAction} from 'mobx';
 
-type NodesType = Array<{
+type NodeType = {
     name: string,
     ip: string,
-}>;
+    login?: string,
+    password?: string, 
+};
+
+type NodesType = Array<NodeType>;
 
 class NodesStore {
     nodes: NodesType = [];
@@ -23,6 +27,20 @@ class NodesStore {
             .then(response => {
                 this.nodes = response;
             });
+    };
+
+    addNode(node: NodeType) {
+        node.ip = node.ip + ':22';
+
+        this.nodes.push(node);
+
+        fetch('http://localhost:8091/api/addNode', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(node),
+        });
     };
 };
 
