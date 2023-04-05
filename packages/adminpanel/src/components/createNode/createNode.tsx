@@ -27,16 +27,34 @@ const CreateNode = () => {
             </div>
 
             <form className={style.form} onSubmit={handleSubmit(ModalState.close)}>
+                <Text type={'formLabel'}>Название</Text>
+                <input className={style.input + (errors.name ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'Название сервера в системе'} {...register('name', {
+                    required: true,
+                    minLength: 5,
+                    maxLength: 20,
+                })} />
+                <div className={style.errorBlock}>
+                    {errors?.name?.type === 'required' && (
+                        <Text type={'errorMsg'}>Это обязятельное для ввода поле</Text>
+                    )}
+                    {errors?.name?.type === 'maxLength' && (
+                        <Text type={'errorMsg'}>Длинна названия должна быть менее 20 символов</Text>
+                    )}
+                    {errors?.name?.type === 'minLength' && (
+                        <Text type={'errorMsg'}>Длинна названия должна быть более 5 символов</Text>
+                    )}
+                </div>
+
                 <Text type={'formLabel'}>IP адресс</Text>
-                <input className={style.input + (errors.adress ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'192.168.0.0'} {...register('adress', {
+                <input className={style.input + (errors.ip ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'192.168.0.0'} {...register('ip', {
                     required: true,
                     pattern: /^(?!0)(?!.*\.$)((1?\d?\d|25[0-5]|2[0-4]\d)(\.|$)){4}$/i
                 })} />
                 <div className={style.errorBlock}>
-                    {errors?.adress?.type === 'required' && (
+                    {errors?.ip?.type === 'required' && (
                         <Text type={'errorMsg'}>Это обязятельное для ввода поле</Text>
                     )}
-                    {errors?.adress?.type === 'pattern' && (
+                    {errors?.ip?.type === 'pattern' && (
                         <Text type={'errorMsg'}>Вводите IP адреес по примеру 192.168.0.0</Text>
                     )}
                 </div>
