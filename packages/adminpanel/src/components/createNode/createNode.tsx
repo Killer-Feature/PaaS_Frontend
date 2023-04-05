@@ -3,6 +3,7 @@ import svg from '../../assets/createNode.svg';
 import { Text, Button } from 'paaskit';
 import { useForm } from 'react-hook-form';
 import ModalState from '../../models/modal';
+import NodesStore, { NodeType } from '../../models/nodes';
 
 const CreateNode = () => {
     const {
@@ -11,6 +12,13 @@ const CreateNode = () => {
         watch,
         formState: { errors }
     } = useForm();
+
+    // @ts-ignore
+    const onSubmit = (data) => {
+        NodesStore.addNode(data);
+
+        ModalState.close();
+    };
     
     return (
         <div className={style.block}>
@@ -26,7 +34,7 @@ const CreateNode = () => {
                 </Text>
             </div>
 
-            <form className={style.form} onSubmit={handleSubmit(ModalState.close)}>
+            <form className={style.form} onSubmit={handleSubmit(onSubmit)}>
                 <Text type={'formLabel'}>Название</Text>
                 <input className={style.input + (errors.name ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'Название сервера в системе'} {...register('name', {
                     required: true,
@@ -88,7 +96,7 @@ const CreateNode = () => {
                     <Button type={'input'} isSec callback={() => ModalState.close()}>
                         Отмена
                     </Button>
-                    <Button type={'input'} callback={handleSubmit(() => ModalState.close())}>
+                    <Button type={'input'} callback={handleSubmit(onSubmit)}>
                         Добавить
                     </Button>
                 </div>

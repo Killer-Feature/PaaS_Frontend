@@ -1,6 +1,6 @@
 import {makeAutoObservable, runInAction} from 'mobx';
 
-type NodeType = {
+export type NodeType = {
     name: string,
     ip: string,
     login?: string,
