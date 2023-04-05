@@ -5,47 +5,14 @@ import diamond from '../../assets/diamond.svg';
 import juk from '../../assets/juk.svg';
 import trash from '../../assets/trash.svg';
 import pan from '../../assets/pan.svg';
+import NodesStore from '../../models/nodes'
+import { observer } from 'mobx-react-lite';
 
-type Data = Array<{
-    ip: string,
-    name: string,
-}>;
-
-const Table = () => {
-    const [data, setData] = useState<Data>([]);
+const Table = observer(() => {
+    const data = NodesStore.nodes;
 
     useEffect(() => {
-        fetch('http://localhost:8091/api/getClusterNodes', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        })
-            .then(response => response.json())
-            .then(response => {
-                setData(response);
-                
-            })
-            .catch(() =>{
-                setData([
-                    {
-                        name: 'Моя любимая тачка',
-                        ip: '192.168.2.150',
-                    },
-                    {
-                        name: 'Моя не любимая тачка',
-                        ip: '192.168.2.152',
-                    },
-                    {
-                        name: 'Моя сойдет любимая тачка',
-                        ip: '192.168.2.153',
-                    },
-                    {
-                        name: 'Моя норм тачка',
-                        ip: '192.168.2.154',
-                    },
-                ]);
-            });
+        NodesStore.fetch();
     }, []);
 
     return (
@@ -59,7 +26,7 @@ const Table = () => {
 
             {data.length === 0 &&
                 <div className={style.empty}>
-                    Подключенные тачки отсутвуют
+                    Подключенные сервера отсутвуют
                 </div>
             }
 
@@ -120,6 +87,6 @@ const Table = () => {
             })}
         </div>
     );
-};
+});
 
 export default Table;

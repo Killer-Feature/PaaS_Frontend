@@ -6,7 +6,7 @@
     height: var(--size-header-height);
     max-width: var(--size_width-max);
     width: 100%;
-    padding: 0px 128px;
+    padding: 0px 64px;
 }
 
 .container {
