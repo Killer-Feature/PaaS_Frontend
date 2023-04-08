@@ -1,4 +1,5 @@
-import {makeAutoObservable, runInAction} from 'mobx';
+import {makeAutoObservable} from 'mobx';
+import NodesNet from '../network/node';
 
 export type NodeType = {
     name: string,
@@ -16,31 +17,16 @@ class NodesStore {
         makeAutoObservable(this);
     };
 
-    fetch() {
-        fetch('http://localhost:8091/api/getClusterNodes', {
-            method: 'GET',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-        })
-            .then(response => response.json())
-            .then(response => {
-                this.nodes = response;
-            });
+    async fetch() {
+        this.nodes = await NodesNet.getNodes();
     };
 
-    addNode(node: NodeType) {
+    async addNode(node: NodeType) {
         node.ip = node.ip + ':22';
 
-        this.nodes.push(node);
+        await NodesNet.addNode(node);
 
-        fetch('http://localhost:8091/api/addNode', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(node),
-        });
+        this.nodes.push(node);
     };
 };
 

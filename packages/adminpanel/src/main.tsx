@@ -10,6 +10,7 @@ import IndexPage from './views/index/index';
 import Modal from './views/modal/modal';
 import ModalState, { State } from './models/modal';
 import {observer} from 'mobx-react-lite';
+import './network/base';
 
 const App = observer(() => {
 	return (
