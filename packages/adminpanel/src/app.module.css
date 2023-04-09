@@ -43,3 +43,11 @@
 .modalOpen {
     transform: scale(0.9);
 }
+
+.menu {
+    text-decoration: none;
+}
+
+.menu:visited {
+    color: unset;
+}

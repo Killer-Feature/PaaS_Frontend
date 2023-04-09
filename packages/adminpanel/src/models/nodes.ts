@@ -5,7 +5,7 @@ export type NodeType = {
     id: number,
     name: string,
     ip: string,
-    cluster: number,
+    clusterID: number,
     login?: string,
     password?: string,
 };
@@ -46,7 +46,7 @@ class NodesStore {
 
         this.nodes.forEach((el) => {
             if (el.id === id) {
-                el.cluster = 10;
+                el.clusterID = 10;
             };
         });
     }

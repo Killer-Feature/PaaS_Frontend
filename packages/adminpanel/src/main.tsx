@@ -18,10 +18,10 @@ const App = observer(() => {
 	return (
 		<>
 			<Header>
-				<Text type='menu'><Link to={'/nodes'}>Главная</Link></Text>
+				<Text type='menu'><Link className={style.menu} to={'/nodes'}>Главная</Link></Text>
 				<Text type='menu'>Кластер</Text>
 				<Text type='menu'>Приложения</Text>
-				<Text type='menu'><Link to={'/resources'}>Ресурсы</Link></Text>
+				<Text type='menu'><Link className={style.menu} to={'/resources'}>Ресурсы</Link></Text>
 				<Text type='menu'>Service mesh</Text>
 			</Header>
 			<div className={

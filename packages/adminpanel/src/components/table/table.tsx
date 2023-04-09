@@ -75,7 +75,7 @@ const Table = observer(() => {
                             </a>
                         </div>
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line}>
-                            {!el.cluster ? 
+                            {!el.clusterID ? 
                                 <Button isSec callback={() => NodesStore.addNodeToCluster(el.id)}>Добавить в кластер</Button>
                                 :
                                 <Text type={'tableDesc'}>
