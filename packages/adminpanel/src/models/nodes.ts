@@ -5,7 +5,7 @@ export type NodeType = {
     id: number,
     name: string,
     ip: string,
-    cluster: string,
+    cluster: number,
     login?: string,
     password?: string,
 };
@@ -42,7 +42,13 @@ class NodesStore {
     }
 
     async addNodeToCluster(id: number)  {
+        await NodesNet.addNodeToCluster(id);
 
+        this.nodes.forEach((el) => {
+            if (el.id === id) {
+                el.cluster = 10;
+            };
+        });
     }
 };
 

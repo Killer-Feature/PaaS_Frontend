@@ -76,10 +76,10 @@ const Table = observer(() => {
                         </div>
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line}>
                             {!el.cluster ? 
-                                <Button callback={NodesStore.addNodeToCluster(el.id)}>Добавить в кластер</Button>
+                                <Button callback={() => NodesStore.addNodeToCluster(el.id)}>Добавить в кластер</Button>
                                 :
                                 <Text type={'tableDesc'}>
-                                    Очень хороший кластер
+                                    Пока единственный кластер
                                 </Text>
                             }
                         </div>

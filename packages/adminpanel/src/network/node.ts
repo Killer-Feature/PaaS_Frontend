@@ -13,6 +13,11 @@ const NodesNet = {
             id
         })).data;
     },
+    addNodeToCluster: async (id: number) => {
+        return (await axios.post('/addNodeToCluster', {
+            id
+        })).data;
+    },
 };
 
 export default NodesNet;
