@@ -8,6 +8,11 @@ const NodesNet = {
     addNode: async (data: NodeType) => {
         return (await axios.post('/addNode', data)).data;
     },
+    removeNode: async (id: number) => {
+        return (await axios.post('/removeNode', {
+            id
+        })).data;
+    },
 };
 
 export default NodesNet;

@@ -1,0 +1,8 @@
+.block {
+    align-items: start;
+    text-align: left;
+}
+
+.buttons {
+    margin-top: 32px;
+}

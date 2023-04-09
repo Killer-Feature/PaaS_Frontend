@@ -6,14 +6,16 @@ type Props = {
 	callback?: (data: any) => void,
 	type?: 'input',
 	isSec?: boolean,
+	isDanger?: boolean,
 };
 
-const MyButton: React.FC<Props> = ({ children, callback, type, isSec = false }) => {
+const MyButton: React.FC<Props> = ({ children, callback, type, isSec = false, isDanger = false }) => {
 	return (
 		<div onClick={callback} className={
 			style.block
 			+ (type ? (' ' + style[type ?? 'block']) : '')
 			+ (isSec ? (' ' + style.sec) : '')
+			+ (isDanger ? (' ' + style.danger) : '')
 		}>
 			{children}
 		</div>

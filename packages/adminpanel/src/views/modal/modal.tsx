@@ -2,10 +2,12 @@ import ModalState, { State, Modals } from '../../models/modal';
 import {observer} from 'mobx-react-lite';
 import style from './modal.module.css';
 import close from '../../assets/close.svg';
-import CreateNode from '../../components/createNode/createNode';
+import CreateNode from '../../components/modals/createNode/createNode';
+import RemoveModal from '../../components/modals/removeModal/removeModal';
 
 const modalsComponents: Record<Modals, () => JSX.Element> = {
     [Modals.CreateNode]: CreateNode,
+    [Modals.Remove]: RemoveModal,
 };
 
 const Modal = observer(() => {

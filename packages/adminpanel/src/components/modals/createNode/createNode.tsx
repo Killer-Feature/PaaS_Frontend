@@ -1,9 +1,9 @@
-import style from './createNode.module.css';
-import svg from '../../assets/createNode.svg';
+import style from '../modal.module.css';
+import svg from '../../../assets/createNode.svg';
 import { Text, Button } from 'paaskit';
 import { useForm } from 'react-hook-form';
-import ModalState from '../../models/modal';
-import NodesStore, { NodeType } from '../../models/nodes';
+import ModalState from '../../../models/modal';
+import NodesStore, { NodeType } from '../../../models/nodes';
 
 const CreateNode = () => {
     const {

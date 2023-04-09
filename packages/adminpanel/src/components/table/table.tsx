@@ -7,6 +7,7 @@ import trash from '../../assets/trash.svg';
 import pan from '../../assets/pan.svg';
 import NodesStore from '../../models/nodes'
 import { observer } from 'mobx-react-lite';
+import Modal, {Modals} from '../../models/modal';
 
 const Table = observer(() => {
     const data = NodesStore.nodes;
@@ -74,8 +75,8 @@ const Table = observer(() => {
                             </a>
                         </div>
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line}>
-                            {!!el.cluster ? 
-                                <Button callback={() => {}}>Добавить в кластер</Button>
+                            {!el.cluster ? 
+                                <Button callback={NodesStore.addNodeToCluster(el.id)}>Добавить в кластер</Button>
                                 :
                                 <Text type={'tableDesc'}>
                                     Очень хороший кластер
@@ -83,7 +84,11 @@ const Table = observer(() => {
                             }
                         </div>
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line + ' ' + style.actions}>
-                            <img src={trash} />
+                            <img className={style.pointer} onClick={() => Modal.open(Modals.Remove, {
+                                callback: () => NodesStore.removeNode(el.id),
+                                name: 'сервер',
+                                description: 'Это действие безвозвратно удалит сервер из базы данных и из кластера'
+                            })} src={trash} />
                             <img src={pan} />
                         </div>
                     </>

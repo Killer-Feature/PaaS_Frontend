@@ -9,6 +9,7 @@ export enum State {
 
 export enum Modals {
     CreateNode,
+    Remove,
 };
 
 class Modal {
@@ -21,7 +22,7 @@ class Modal {
         makeAutoObservable(this);
     };
 
-    open(type: Modals, context = null) {
+    open(type: Modals, context: any = null) {
         this.type = type;
         this.state = State.Opening;
         this.context = context;
