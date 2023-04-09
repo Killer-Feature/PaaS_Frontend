@@ -46,10 +46,10 @@ const CreateNode = () => {
                         <Text type={'errorMsg'}>Это обязятельное для ввода поле</Text>
                     )}
                     {errors?.name?.type === 'maxLength' && (
-                        <Text type={'errorMsg'}>Длинна названия должна быть менее 20 символов</Text>
+                        <Text type={'errorMsg'}>Длина названия должна быть менее 20 символов</Text>
                     )}
                     {errors?.name?.type === 'minLength' && (
-                        <Text type={'errorMsg'}>Длинна названия должна быть более 5 символов</Text>
+                        <Text type={'errorMsg'}>Длина названия должна быть более 5 символов</Text>
                     )}
                 </div>
 

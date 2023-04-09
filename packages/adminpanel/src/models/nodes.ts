@@ -12,13 +12,17 @@ type NodesType = Array<NodeType>;
 
 class NodesStore {
     nodes: NodesType = [];
+    isLoaded: boolean = false;
 
     constructor() {
         makeAutoObservable(this);
     };
 
     async fetch() {
-        this.nodes = await NodesNet.getNodes();
+        if (!this.isLoaded) {
+            this.isLoaded = true;
+            this.nodes = await NodesNet.getNodes();
+        }
     };
 
     async addNode(node: NodeType) {
