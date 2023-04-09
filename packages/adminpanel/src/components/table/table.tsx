@@ -1,6 +1,6 @@
 import style from './table.module.css';
 import { useState, useEffect } from 'react';
-import { Text } from 'paaskit';
+import { Text, Button } from 'paaskit';
 import diamond from '../../assets/diamond.svg';
 import juk from '../../assets/juk.svg';
 import trash from '../../assets/trash.svg';
@@ -43,7 +43,7 @@ const Table = observer(() => {
                                     <div className={style.icon + ' ' + style.iconGray}>
                                         <img src={juk} />
                                     </div>
-                            }   
+                            } 
 
                             <div>
                                 <Text type={'tableTitle'}>
@@ -74,9 +74,13 @@ const Table = observer(() => {
                             </a>
                         </div>
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line}>
-                            <Text type={'tableDesc'}>
-                                Очень хороший кластер
-                            </Text>
+                            {!!el.cluster ? 
+                                <Button callback={() => {}}>Добавить в кластер</Button>
+                                :
+                                <Text type={'tableDesc'}>
+                                    Очень хороший кластер
+                                </Text>
+                            }
                         </div>
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line + ' ' + style.actions}>
                             <img src={trash} />

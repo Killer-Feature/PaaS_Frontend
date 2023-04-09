@@ -4,8 +4,9 @@ import NodesNet from '../network/node';
 export type NodeType = {
     name: string,
     ip: string,
+    cluster: string,
     login?: string,
-    password?: string, 
+    password?: string,
 };
 
 type NodesType = Array<NodeType>;
