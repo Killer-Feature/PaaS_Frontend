@@ -8,6 +8,7 @@ import { ToastContainer } from 'react-toastify';
 import style from './app.module.css';
 import './variables.css';
 import IndexPage from './views/index/index';
+import ResoursesPage from './views/resourses/resourses';
 import Modal from './views/modal/modal';
 import ModalState, { State } from './models/modal';
 import {observer} from 'mobx-react-lite';
@@ -43,7 +44,7 @@ const router = createBrowserRouter(createRoutesFromElements(
 	<Route path='/' element={<App />} >
 		<Route path='/' element={ <Navigate to="/nodes" /> }/>
 		<Route path='/nodes' element={<IndexPage />} />
-		<Route path='/resources' element={<IndexPage />} />
+		<Route path='/resources' element={<ResoursesPage />} />
 	</Route>
 ));
 
