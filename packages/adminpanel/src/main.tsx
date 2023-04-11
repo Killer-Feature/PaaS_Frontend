@@ -1,5 +1,5 @@
 import ReactDOM from 'react-dom/client';
-import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Outlet, Navigate, Link } from 'react-router-dom';
+import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Outlet, Navigate, NavLink } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Text, Header, Button } from 'paaskit';
 import Table from './components/table/table';
@@ -19,10 +19,10 @@ const App = observer(() => {
 	return (
 		<>
 			<Header>
-				<Text type='menu'><Link className={style.menu} to={'/nodes'}>Главная</Link></Text>
+				<Text type='menu'><NavLink className={style.menu} to={'/nodes'}>Главная</NavLink></Text>
 				<Text type='menu'>Кластер</Text>
 				<Text type='menu'>Приложения</Text>
-				<Text type='menu'><Link className={style.menu} to={'/resources'}>Ресурсы</Link></Text>
+				<Text type='menu'><NavLink className={style.menu} to={'/resources'}>Ресурсы</NavLink></Text>
 				<Text type='menu'>Service mesh</Text>
 			</Header>
 			<div className={

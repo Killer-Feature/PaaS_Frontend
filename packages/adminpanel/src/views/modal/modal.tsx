@@ -8,6 +8,7 @@ import RemoveModal from '../../components/modals/removeModal/removeModal';
 const modalsComponents: Record<Modals, () => JSX.Element> = {
     [Modals.CreateNode]: CreateNode,
     [Modals.Remove]: RemoveModal,
+    [Modals.AddResourse]: CreateNode,
 };
 
 const Modal = observer(() => {

@@ -35,7 +35,7 @@ const Table = observer(() => {
                 return (
                     <>
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line}>
-                            {(i === 0)
+                            {(el.isMaster)
                                 ?
                                     <div className={style.icon + ' ' + style.iconGreen}>
                                         <img src={diamond} />

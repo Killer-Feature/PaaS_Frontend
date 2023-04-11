@@ -6,6 +6,7 @@ export type NodeType = {
     name: string,
     ip: string,
     clusterID: number,
+    isMaster: boolean,
     login?: string,
     password?: string,
 };
