@@ -2,7 +2,7 @@ import ReactDOM from 'react-dom/client';
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider, Outlet, Navigate, NavLink } from 'react-router-dom';
 import React, { useState } from 'react';
 import { Text, Header, Button } from 'paaskit';
-import Table from './components/table/table';
+import Table from './components/table/nodes/table';
 import 'paaskit/style.css';
 import { ToastContainer } from 'react-toastify';
 import style from './app.module.css';
@@ -20,10 +20,10 @@ const App = observer(() => {
 		<>
 			<Header>
 				<Text type='menu'><NavLink className={style.menu} to={'/nodes'}>Главная</NavLink></Text>
-				<Text type='menu'>Кластер</Text>
-				<Text type='menu'>Приложения</Text>
+				{/* <Text type='menu'>Кластер</Text>
+				<Text type='menu'>Приложения</Text> */}
 				<Text type='menu'><NavLink className={style.menu} to={'/resources'}>Ресурсы</NavLink></Text>
-				<Text type='menu'>Service mesh</Text>
+				{/* <Text type='menu'>Service mesh</Text> */}
 			</Header>
 			<div className={
 				((ModalState.state === State.Opening) ? style.modalOpening : '')

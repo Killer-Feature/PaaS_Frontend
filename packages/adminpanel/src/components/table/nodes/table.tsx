@@ -1,13 +1,13 @@
-import style from './table.module.css';
+import style from '../table.module.css';
 import { useState, useEffect } from 'react';
 import { Text, Button } from 'paaskit';
-import diamond from '../../assets/diamond.svg';
-import juk from '../../assets/juk.svg';
-import trash from '../../assets/trash.svg';
-import pan from '../../assets/pan.svg';
-import NodesStore from '../../models/nodes'
+import diamond from '../../../assets/diamond.svg';
+import juk from '../../../assets/juk.svg';
+import trash from '../../../assets/trash.svg';
+import pan from '../../../assets/pan.svg';
+import NodesStore from '../../../models/nodes'
 import { observer } from 'mobx-react-lite';
-import Modal, {Modals} from '../../models/modal';
+import Modal, {Modals} from '../../../models/modal';
 
 const Table = observer(() => {
     const data = NodesStore.nodes;
@@ -44,7 +44,7 @@ const Table = observer(() => {
                                     <div className={style.icon + ' ' + style.iconGray}>
                                         <img src={juk} />
                                     </div>
-                            } 
+                            }
 
                             <div>
                                 <Text type={'tableTitle'}>
