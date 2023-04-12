@@ -3,6 +3,7 @@ import ResourseNet from '../network/resourse';
 
 export type ResourseType = {
     name: string;
+    type: string;
     status: string;
     lastDeployed: string;
     firstDeployed: string;
@@ -25,8 +26,17 @@ class ResoursesStore {
         }
     }
 
-    async addResourse(resourse: ResourseType) {
-        console.log(resourse);
+    async addResourse(resourse: {type: string, name: string}) {
+        await ResourseNet.createResourse(resourse);
+
+        this.isLoaded = false;
+        this.fetch();
+    }
+
+    async removeResourse(type: string)  {
+        await ResourseNet.removeResourse(type);
+
+        this.resourses = this.resourses.filter((el) => el.type !== type);
     }
 };
 

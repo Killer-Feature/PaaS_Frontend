@@ -41,10 +41,10 @@ const Resourses = observer(() => {
 
                             <div>
                                 <Text type={'tableTitle'}>
-                                    {'Имя ресурса'}
+                                    {el.name}
                                 </Text>
                                 <Text type={'tableDesc'}>
-                                    {el.name}
+                                    {el.type}
                                 </Text>
                             </div>
                         </div>
@@ -66,11 +66,11 @@ const Resourses = observer(() => {
                             </Text>
                         </div>
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line + ' ' + style.actions}>
-                            {/* <img className={style.pointer} onClick={() => Modal.open(Modals.Remove, {
-                                callback: () => NodesStore.removeNode(el.id),
-                                name: 'сервер',
-                                description: 'Это действие безвозвратно удалит сервер из базы данных и из кластера'
-                            })} src={trash} /> */}
+                            <img className={style.pointer} onClick={() => Modal.open(Modals.Remove, {
+                                callback: () => ResoursesStore.removeResourse(el.type),
+                                name: 'ресурс',
+                                description: 'Это действие безвозвратно удалит ресурс из базы данных и из кластера'
+                            })} src={trash} />
                             <img src={pan} />
                         </div>
                     </>
