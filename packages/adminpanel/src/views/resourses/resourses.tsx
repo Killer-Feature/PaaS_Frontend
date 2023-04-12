@@ -4,7 +4,7 @@ import TechMetrics from '../../components/techMetrics/techMetrics';
 import plus from '../../assets/plus.svg'
 import viteLogo from '/vite.svg'
 import { Text, Header, Button } from 'paaskit';
-import Table from '../../components/table/nodes/table';
+import ResoursesTable from '../../components/table/resourses/resourses';
 import ModalState, {Modals} from '../../models/modal';
 
 const Resourses = () => {
@@ -19,7 +19,7 @@ const Resourses = () => {
                     <span>Добавить ресурс</span>
                 </Button>
             </div>
-            <Table />
+            <ResoursesTable />
         </>
     );
 };

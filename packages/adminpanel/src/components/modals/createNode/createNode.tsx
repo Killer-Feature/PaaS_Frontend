@@ -53,7 +53,7 @@ const CreateNode = () => {
                     )}
                 </div>
 
-                <Text type={'formLabel'}>IP адресс</Text>
+                <Text type={'formLabel'}>IP адрес</Text>
                 <input className={style.input + (errors.ip ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'192.168.0.0'} {...register('ip', {
                     required: true,
                     pattern: /^(?!0)(?!.*\.$)((1?\d?\d|25[0-5]|2[0-4]\d)(\.|$)){4}$/i
