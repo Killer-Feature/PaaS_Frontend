@@ -14,7 +14,7 @@ const Resourses = () => {
                 <Title desc={'В этом разделе находится конфигурация ресурсов приложения'}>
                     Конфигурация ресурсов
                 </Title>
-                <Button callback={() => ModalState.open(Modals.AddResourse)}>
+                <Button callback={() => ModalState.open(Modals.CreateResourse)}>
                     <img src={plus} alt={'plus'} />
                     <span>Добавить ресурс</span>
                 </Button>

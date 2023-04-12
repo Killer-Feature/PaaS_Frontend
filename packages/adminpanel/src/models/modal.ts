@@ -10,7 +10,7 @@ export enum State {
 export enum Modals {
     CreateNode,
     Remove,
-    AddResourse,
+    CreateResourse,
 };
 
 class Modal {

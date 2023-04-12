@@ -24,6 +24,10 @@ class ResoursesStore {
             this.resourses = await ResourseNet.getResourses();
         }
     }
+
+    async addResourse(resourse: ResourseType) {
+        console.log(resourse);
+    }
 };
 
 export default new ResoursesStore();

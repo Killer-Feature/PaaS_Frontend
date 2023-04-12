@@ -22,7 +22,7 @@ const CreateNode = () => {
     
     return (
         <div className={style.block}>
-            <img src={svg} alt={'Ass node icon'} />
+            <img src={svg} alt={'node icon'} />
             <div className={style.title}>
                 <Text type={'modalTitle'}>
                     Введите данные сервера
