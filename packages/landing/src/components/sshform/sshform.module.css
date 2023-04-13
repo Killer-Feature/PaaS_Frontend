@@ -9,6 +9,11 @@
     padding: 70px 0;
 }
 
+.block > p {
+    max-width: 1000px;
+    text-align: center;
+}
+
 .form {
     display: flex;
     flex-direction: column;

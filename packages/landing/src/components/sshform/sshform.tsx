@@ -43,8 +43,8 @@ const SSHForm: React.FunctionComponent = () => {
 
     return (
         <div className={style.block}>
-            <Text type='h2'>Введите ключ SSH и разверните нашу систему</Text>
-            <Text type='pDesc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</Text>
+            <Text type='h2'>Введите данные для подключения по SSH к Вашему серверу и разверните нашу систему</Text>
+            <Text type='pDesc'>Наши сервера в автоматическом режиме подключатся по SSH к Вашему серверу и установят последнюю версию нашего Control-plane, предоставив Вам готовый к использованию сервис</Text>
 
             <form className={style.form} onSubmit={onSubmit}>
                 <input type='text' name='ip' placeholder='IP адресс'></input>
