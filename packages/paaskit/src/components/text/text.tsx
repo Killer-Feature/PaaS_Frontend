@@ -3,7 +3,7 @@ import style from './text.module.css';
 
 type Props = {
     children: React.ReactNode,
-    type?: 'h1' | 'p' | 'h2' | 'h3'| 'pDesc' | 'menu' | 'title' | 'tableHead' | 'tableTitle' | 'tableDesc' | 'techDesc' | 'modalTitle' | 'formLabel' | 'errorMsg',
+    type?: 'h1' | 'p' | 'h2' | 'h3'| 'pDesc' | 'menu' | 'title' | 'tableHead' | 'tableTitle' | 'tableDesc' | 'techDesc' | 'modalTitle' | 'formLabel' | 'errorMsg' | 'ftrsTitle' | 'ftrsDesc',
 };
 
 const Text: React.FunctionComponent<Props> = ({children, type}) => {

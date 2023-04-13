@@ -90,3 +90,17 @@
     color: #101828;
     line-height: 28px;
 }
+
+.ftrsTitle {
+    font-weight: 600;
+    font-size: 20px;
+    color: #101828;
+    line-height: 30px;
+}
+
+.ftrsDesc {
+    font-weight: 400;
+    font-size: 16px;
+    color: #475467;
+    line-height: 24px;
+}

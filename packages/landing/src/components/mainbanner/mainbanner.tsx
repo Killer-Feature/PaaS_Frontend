@@ -11,9 +11,9 @@ const MainBanner: React.FunctionComponent = () => {
                     text1={'Быстрый старт'}
                     text2={'Разверните нашу систему в пару кликов'}
                 />
-                <Text type='h1'>Мы помогаем делать девопс простым</Text>
+                <Text type='h1'>Мы делаем DevOps простым </Text>
                 <div className={style.desc}>
-                    <Text type='pDesc'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</Text>
+                    <Text type='pDesc'>Развернем production ready kubernetes кластер и настрим Ваш собственный PaaS</Text>
                 </div>
             </div>
             <MacBook />
