@@ -28,7 +28,7 @@ const SSHForm: React.FunctionComponent = () => {
 
         Store.addNotification({
             title: "Успех!",
-            message: "Сервис успешно начал деплой бинарника",
+            message: "Сервис успешно начал деплой бинарника. Чтобы открыть админ панель зайдите по http на ваш домен",
             type: "success",
             insert: "top",
             container: "top-right",
