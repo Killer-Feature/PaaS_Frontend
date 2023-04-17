@@ -1,0 +1,27 @@
+.block {
+    max-width: 800px;
+    width: 800px;
+}
+
+.desc {
+    max-width: 400px;
+}
+
+
+.hr {
+    background-color: #EAECF0;
+    height: 1px;
+    width: calc(100% + 2 * 24px);
+    margin: 24px 0;
+}
+
+.code {
+    max-width: calc(100% - 24px);
+    text-align: left;
+    filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.02));
+    border: 1px solid #EAECF0;
+    border-radius: 12px;
+    padding: 0 12px;
+    font-size: 15px;
+    background-color: rgb(28, 29, 33);
+}
