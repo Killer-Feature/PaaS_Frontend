@@ -61,6 +61,10 @@ class NodesStore {
             };
         });
     }
+
+    get isHasCluster() {
+        return this.nodes.some((el) => !!el.clusterID);
+    }
 };
 
 export default new NodesStore();

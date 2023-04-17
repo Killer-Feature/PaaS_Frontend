@@ -16,8 +16,7 @@ const Resourses = () => {
                     Конфигурация ресурсов
                 </Title>
                 <Button callback={() => {
-                    const isHasCluster = NodesStore.nodes.some((el) => !!el.clusterID);
-                    if (isHasCluster) {
+                    if (NodesStore.isHasCluster) {
                         ModalState.open(Modals.CreateResourse);
                     } else {
                         ModalState.open(Modals.Warning, {
