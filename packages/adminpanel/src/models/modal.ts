@@ -12,6 +12,7 @@ export enum Modals {
     Remove,
     CreateResourse,
     Warning,
+    Config,
 };
 
 class Modal {
