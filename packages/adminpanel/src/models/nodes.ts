@@ -53,11 +53,11 @@ class NodesStore {
     }
 
     async addNodeToCluster(id: number)  {
-        await NodesNet.addNodeToCluster(id);
+        const clusetId = await NodesNet.addNodeToCluster(id);
 
         this.nodes.forEach((el) => {
             if (el.id === id) {
-                el.clusterID = 10;
+                el.clusterID = clusetId;
             };
         });
     }
