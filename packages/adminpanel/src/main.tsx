@@ -23,7 +23,7 @@ const App = observer(() => {
 				{/* <Text type='menu'>Кластер</Text>
 				<Text type='menu'>Приложения</Text> */}
 				<Text type='menu'><NavLink className={style.menu} to={'/resources'}>Ресурсы</NavLink></Text>
-				{/* <Text type='menu'>Service mesh</Text> */}
+				<Text type='menu'><NavLink className={style.menu} to={'/apps'}>Приложения</NavLink></Text>
 			</Header>
 			<div className={
 				((ModalState.state === State.Opening) ? style.modalOpening : '')
@@ -45,6 +45,7 @@ const router = createBrowserRouter(createRoutesFromElements(
 		<Route path='/' element={ <Navigate to="/nodes" /> }/>
 		<Route path='/nodes' element={<IndexPage />} />
 		<Route path='/resources' element={<ResoursesPage />} />
+		<Route path='/apps' element={<ResoursesPage />} />
 	</Route>
 ));
 

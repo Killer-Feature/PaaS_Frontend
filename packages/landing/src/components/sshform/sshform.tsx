@@ -65,7 +65,7 @@ const SSHForm: React.FunctionComponent = () => {
             <Text type='h2'>Введите данные для подключения по SSH к Вашему серверу и разверните нашу систему</Text>
             <Text type='pDesc'>Наши сервера в автоматическом режиме подключатся по SSH к Вашему серверу и установят последнюю версию нашего Control-plane, предоставив Вам готовый к использованию сервис</Text>
 
-            {isDeploed ?
+            {!isDeploed ?
                 <form className={style.form} onSubmit={onSubmit}>
                     <input type='text' name='ip' placeholder='IP адресс'></input>
                     <input type='text' name='port' placeholder='Port'></input>
@@ -79,7 +79,7 @@ const SSHForm: React.FunctionComponent = () => {
             :
                 <Text type='pDesc'>
                     <br/><br/><br/><br/><br/>
-                    Приложение успешно <b>развернуто</b>.<br/> Перейдите по ссылке <a href={'http://' + isDeploed + '/'}>{'http://' + isDeploed + '/'}</a>, чтобы открыть админ панель.
+                    Приложение успешно <b>развернуто</b>.<br/> Перейдите по ссылке <a href={'http://' + isDeploed + ':8090/'}>{'http://' + isDeploed + ':8090/'}</a>, чтобы открыть админ панель.
                 </Text>
             }
         </div>

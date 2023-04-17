@@ -39,14 +39,14 @@ const CreateNode = () => {
                 <input className={style.input + (errors.name ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'Название сервера в системе'} {...register('name', {
                     required: true,
                     minLength: 5,
-                    maxLength: 20,
+                    maxLength: 30,
                 })} />
                 <div className={style.errorBlock}>
                     {errors?.name?.type === 'required' && (
                         <Text type={'errorMsg'}>Это обязятельное для ввода поле</Text>
                     )}
                     {errors?.name?.type === 'maxLength' && (
-                        <Text type={'errorMsg'}>Длина названия должна быть менее 20 символов</Text>
+                        <Text type={'errorMsg'}>Длина названия должна быть менее 30 символов</Text>
                     )}
                     {errors?.name?.type === 'minLength' && (
                         <Text type={'errorMsg'}>Длина названия должна быть более 5 символов</Text>
