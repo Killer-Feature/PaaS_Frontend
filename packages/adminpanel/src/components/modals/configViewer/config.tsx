@@ -10,12 +10,12 @@ const ConfigModal = () => {
             <img src={svg} alt={'node icon'} />
             <div className={style.title}>
                 <Text type={'modalTitle'}>
-                    {ModalState.context.title}
+                    Это конфиг Вашего кластера
                 </Text>
             </div>
             <div className={style.desc}>
                 <Text type={'tableDesc'}>
-                    {ModalState.context.description}
+                    В этом модальном окне можно посмотреть конфиг развернутого кластера
                 </Text>
             </div>
         </div>
