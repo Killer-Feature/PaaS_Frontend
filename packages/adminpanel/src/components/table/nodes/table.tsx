@@ -84,11 +84,21 @@ const Table = observer(() => {
                             }
                         </div>
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line + ' ' + style.actions}>
-                            <img className={style.pointer} onClick={() => Modal.open(Modals.Remove, {
-                                callback: () => NodesStore.removeNode(el.id),
-                                name: 'сервер',
-                                description: 'Это действие безвозвратно удалит сервер из базы данных и из кластера'
-                            })} src={trash} />
+                            <img className={style.pointer} onClick={() => {
+                                if (!!el.clusterID) {
+                                    Modal.open(Modals.Remove, {
+                                        callback: () => NodesStore.removeNodeFromCluster(el.id),
+                                        name: 'сервер',
+                                        description: 'Это действие безвозвратно удалит сервер из Вашего кластера',
+                                    });
+                                } else {
+                                    Modal.open(Modals.Remove, {
+                                        callback: () => NodesStore.removeNode(el.id),
+                                        name: 'сервер',
+                                        description: 'Это действие безвозвратно удалит сервер из базы данных',
+                                    });
+                                }
+                            }} src={trash} />
                             <img src={pan} />
                         </div>
                     </>

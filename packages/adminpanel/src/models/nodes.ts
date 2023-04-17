@@ -42,6 +42,16 @@ class NodesStore {
         this.nodes = this.nodes.filter((el) => el.id !== id);
     }
 
+    async removeNodeFromCluster(id: number)  {
+        await NodesNet.removeNodeFromCluster(id);
+
+        const node = this.nodes.find((el) => el.id !== id);
+
+        if (!!node) {
+            node.clusterID = 0;
+        }
+    }
+
     async addNodeToCluster(id: number)  {
         await NodesNet.addNodeToCluster(id);
 

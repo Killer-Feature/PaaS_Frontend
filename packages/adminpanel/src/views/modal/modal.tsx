@@ -5,11 +5,13 @@ import close from '../../assets/close.svg';
 import CreateNode from '../../components/modals/createNode/createNode';
 import RemoveModal from '../../components/modals/removeModal/removeModal';
 import CreateResourse from '../../components/modals/createResourse/createResourse';
+import WarningModal from '../../components/modals/warning/warning';
 
 const modalsComponents: Record<Modals, () => JSX.Element> = {
     [Modals.CreateNode]: CreateNode,
     [Modals.Remove]: RemoveModal,
     [Modals.CreateResourse]: CreateResourse,
+    [Modals.Warning]: WarningModal,
 };
 
 const Modal = observer(() => {

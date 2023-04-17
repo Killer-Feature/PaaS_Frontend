@@ -11,6 +11,7 @@ export enum Modals {
     CreateNode,
     Remove,
     CreateResourse,
+    Warning,
 };
 
 class Modal {

@@ -13,6 +13,11 @@ const NodesNet = {
             id
         })).data;
     },
+    removeNodeFromCluster: async (id: number) => {
+        return (await axios.post('/removeNodeFromCluster', {
+            id
+        })).data;
+    },
     addNodeToCluster: async (id: number) => {
         return (await axios.post('/addNodeToCluster', {
             id

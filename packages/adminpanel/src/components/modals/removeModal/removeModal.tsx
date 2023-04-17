@@ -7,7 +7,7 @@ import ModalState from '../../../models/modal';
 const RemoveModal = () => {
     return (
         <div className={style.block + ' ' + remove.block}>
-            <img src={svg} alt={'Ass node icon'} />
+            <img src={svg} alt={'node icon'} />
             <div className={style.title}>
                 <Text type={'modalTitle'}>
                     Удалить {ModalState.context.name}?
