@@ -7,8 +7,13 @@ import { Text, Header, Button } from 'paaskit';
 import ResoursesTable from '../../components/table/resourses/resourses';
 import ModalState, {Modals} from '../../models/modal';
 import NodesStore from '../../models/nodes';
+import React from 'react';
 
 const Resourses = () => {
+    React.useEffect(() => {
+        NodesStore.fetch();
+    }, []);
+
     return (
         <>
             <div className={style.title}>

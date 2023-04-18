@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
 import NodesStore from '../models/nodes';
+import ResoursesStore from '../models/resourses';
 
 enum WSMsg {
     addNodeToCluster = 'addNodeToCluster',
@@ -92,6 +93,7 @@ class WS {
             NodesStore.setDeploy(data.nodeID, 100, 'Добавление сервера в k8s');
             break;
         case Status.Success:
+            ResoursesStore.clear();
             this.notifySender('Сервер успешно добавлен в k8s', 'success');
             break;
         case Status.Queue:

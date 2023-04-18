@@ -38,6 +38,11 @@ class ResoursesStore {
 
         this.resourses = this.resourses.filter((el) => el.type !== type);
     }
+
+    clear() {
+        this.isLoaded = false;
+        this.fetch();
+    }
 };
 
 export default new ResoursesStore();
