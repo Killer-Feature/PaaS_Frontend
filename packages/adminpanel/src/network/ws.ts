@@ -121,6 +121,7 @@ class WS {
             NodesStore.setDeploy(data.nodeID, 100, 'Удаление из k8s');
             break;
         case Status.Success:
+            ResoursesStore.clear();
             this.notifySender('Сервер успешно удален из k8s', 'success');
             break;
         case Status.Queue:
