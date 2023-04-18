@@ -13,6 +13,7 @@ import Modal from './views/modal/modal';
 import ModalState, { State } from './models/modal';
 import {observer} from 'mobx-react-lite';
 import './network/base';
+import './network/ws';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = observer(() => {

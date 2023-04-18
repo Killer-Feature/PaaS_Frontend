@@ -74,15 +74,21 @@ const Table = observer(() => {
                                 </Text>
                             </a>
                         </div>
-                        <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line}>
-                            {!el.clusterID ? 
-                                <Button isSec callback={() => NodesStore.addNodeToCluster(el.id)}>Добавить в кластер</Button>
-                                :
-                                <Text type={'tableDesc'}>
-                                    Единственный кластер
-                                </Text>
-                            }
-                        </div>
+                        {!el.deployed ?
+                            <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line}>
+                                {!el.clusterID ? 
+                                    <Button isSec callback={() => NodesStore.addNodeToCluster(el.id)}>Добавить в кластер</Button>
+                                    :
+                                    <Text type={'tableDesc'}>
+                                        Единственный кластер
+                                    </Text>
+                                }
+                            </div>
+                        : 
+                            <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line + ' ' + style.progressBar}>
+                                
+                            </div>
+                        }
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line + ' ' + style.actions}>
                             <img className={style.pointer} onClick={() => {
                                 if (!!el.clusterID) {

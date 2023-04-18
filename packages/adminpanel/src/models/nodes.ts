@@ -9,6 +9,10 @@ export type NodeType = {
     isMaster: boolean,
     login?: string,
     password?: string,
+    deployed: undefined | {
+        precent: number,
+        msg: string,
+    },
 };
 
 type NodesType = Array<NodeType>;
@@ -64,6 +68,28 @@ class NodesStore {
 
     get isHasCluster() {
         return this.nodes.some((el) => !!el.clusterID);
+    }
+
+    nodeById(id: number) {
+        return this.nodes.find((node) => node.id === id);
+    }
+
+    setDeploy(id: number, precent: number, msg: string) {
+        const node = this.nodeById(id);
+
+        if (!node) {
+            return;
+        }
+
+        if (precent === 100) {
+            node.deployed = undefined;
+            return;
+        }
+
+        node.deployed = {
+            precent,
+            msg,
+        };
     }
 };
 
