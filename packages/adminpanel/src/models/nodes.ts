@@ -10,7 +10,7 @@ export type NodeType = {
     login?: string,
     password?: string,
     deployed: undefined | {
-        precent: number,
+        percent: number,
         msg: string,
     },
 };
@@ -49,7 +49,7 @@ class NodesStore {
     async removeNodeFromCluster(id: number)  {
         await NodesNet.removeNodeFromCluster(id);
 
-        const node = this.nodes.find((el) => el.id !== id);
+        const node = this.nodeById(id);
 
         if (!!node) {
             node.clusterID = 0;
@@ -74,20 +74,20 @@ class NodesStore {
         return this.nodes.find((node) => node.id === id);
     }
 
-    setDeploy(id: number, precent: number, msg: string) {
+    setDeploy(id: number, percent: number, msg: string) {
         const node = this.nodeById(id);
 
         if (!node) {
             return;
         }
 
-        if (precent === 100) {
+        if (percent === 100) {
             node.deployed = undefined;
             return;
         }
 
         node.deployed = {
-            precent,
+            percent,
             msg,
         };
     }

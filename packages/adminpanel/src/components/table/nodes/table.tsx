@@ -86,7 +86,10 @@ const Table = observer(() => {
                             </div>
                         : 
                             <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line + ' ' + style.progressBar}>
-                                
+                                <Text type={'tableHead'}>{el.deployed.msg}</Text>
+                                <div className={style.progressBarBlock}>
+                                    <div className={style.progressBarLizard} style={{width: (5 + el.deployed.percent * (19/20)) + '%'}}></div>
+                                </div>
                             </div>
                         }
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line + ' ' + style.actions}>

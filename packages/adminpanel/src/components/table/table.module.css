@@ -86,5 +86,39 @@
 }
 
 .progressBar {
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.progressBarBlock {
+    width: 150px;
+    height: 10px;
+    background: #eaecf0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.progressBarLizard {
+    --line-size: 5px;
+    background: repeating-linear-gradient(
+        -45deg,
+        #7f56d9 0 var(--line-size),
+        #9e77ed var(--line-size) calc(var(--line-size) * 2)
+    );
+    background-size: calc(var(--line-size) / 0.70710678 * 2) 100%;
+    background-repeat: repeat-x;
+    position: absoluite;
+    height: 100%;
+    border-radius: 20px;
+    animation: Move 100s linear infinite;
+    transition: 1s linear;
+}
+  
+@keyframes Move {
+    100% {
+        background-position-x: 3500px;
+    }
 }
