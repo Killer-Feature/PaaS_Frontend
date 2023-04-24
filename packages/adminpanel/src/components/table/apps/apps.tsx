@@ -1,5 +1,5 @@
 import style from '../table.module.css';
-import resoursesStyle from './apps.module.css';
+import resoursesStyle from './resourses.module.css';
 import { useState, useEffect } from 'react';
 import { Text, Button } from 'paaskit';
 import diamond from '../../../assets/diamond.svg';
