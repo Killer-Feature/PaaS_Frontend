@@ -51,7 +51,7 @@ const Table = observer(() => {
                                     {el.name}
                                 </Text>
                                 <Text type={'tableDesc'}>
-                                    {(i === 0) ? 'Мастер тачка' : 'Славе тачка'}
+                                    {(el.isMaster) ? 'Master сервер' : 'Slave сервер'}
                                 </Text>
                             </div>
                         </div>
