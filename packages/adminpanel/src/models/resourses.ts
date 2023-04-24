@@ -34,9 +34,13 @@ class ResoursesStore {
     }
 
     async removeResourse(type: string)  {
-        await ResourseNet.removeResourse(type);
+        const resourse = this.resourses.find((el) => el.type === type);
 
-        this.resourses = this.resourses.filter((el) => el.type !== type);
+        if (resourse) {
+            await ResourseNet.removeResourse(type, resourse.name);
+
+            this.resourses = this.resourses.filter((el) => el.type !== type);
+        }
     }
 
     clear() {

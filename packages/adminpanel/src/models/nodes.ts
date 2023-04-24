@@ -7,6 +7,7 @@ export type NodeType = {
     ip: string,
     clusterID: number,
     isMaster: boolean,
+    grafana_ip: string,
     login?: string,
     password?: string,
     deployed: undefined | {

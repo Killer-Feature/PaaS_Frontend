@@ -8,9 +8,10 @@ const ResourseNet = {
     createResourse: async (data: {type: string, name: string}) => {
         return (await axios.post('/addResource', data)).data;
     },
-    removeResourse: async (type: string) => {
+    removeResourse: async (type: string, name: string) => {
         return (await axios.post('/removeResource', {
-            type
+            type,
+            name,
         })).data;
     },
 };

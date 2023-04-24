@@ -68,11 +68,17 @@ const Table = observer(() => {
                             </div>
                         </div>
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line}>
-                            <a className={style.link} href={'http://' + el.ip.split(':')[0] + ':3000/'}>
+                            {(el.grafana_ip !== '') ?
+                                <a className={style.link} href={el.grafana_ip} target={'_blank'}>
+                                    <Text type={'tableDesc'}>
+                                        {el.grafana_ip}
+                                    </Text>
+                                </a>
+                                :
                                 <Text type={'tableDesc'}>
-                                    {'http://' + el.ip.split(':')[0] + ':3000/'}
+                                    {'Графана отсутвует'}
                                 </Text>
-                            </a>
+                            }
                         </div>
                         {!el.deployed ?
                             <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line}>
@@ -80,7 +86,7 @@ const Table = observer(() => {
                                     <Button isSec callback={() => NodesStore.addNodeToCluster(el.id)}>Добавить в кластер</Button>
                                     :
                                     <Text type={'tableDesc'}>
-                                        Единственный кластер
+                                        Кластер k8s
                                     </Text>
                                 }
                             </div>
