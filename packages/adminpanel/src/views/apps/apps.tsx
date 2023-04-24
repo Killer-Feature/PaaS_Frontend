@@ -9,11 +9,7 @@ import ModalState, {Modals} from '../../models/modal';
 import NodesStore from '../../models/nodes';
 import React from 'react';
 
-const Resourses = () => {
-    React.useEffect(() => {
-        NodesStore.fetch();
-    }, []);
-
+const Apps = () => {
     return (
         <>
             <div className={style.title}>
@@ -26,4 +22,4 @@ const Resourses = () => {
     );
 };
 
-export default Resourses;
+export default Apps;

@@ -9,6 +9,7 @@ import style from './app.module.css';
 import './variables.css';
 import IndexPage from './views/index/index';
 import ResoursesPage from './views/resourses/resourses';
+import AppsPage from './views/apps/apps';
 import Modal from './views/modal/modal';
 import ModalState, { State } from './models/modal';
 import {observer} from 'mobx-react-lite';
@@ -21,8 +22,6 @@ const App = observer(() => {
 		<>
 			<Header>
 				<Text type='menu'><NavLink className={style.menu} to={'/nodes'}>Главная</NavLink></Text>
-				{/* <Text type='menu'>Кластер</Text>
-				<Text type='menu'>Приложения</Text> */}
 				<Text type='menu'><NavLink className={style.menu} to={'/resources'}>Ресурсы</NavLink></Text>
 				<Text type='menu'><NavLink className={style.menu} to={'/apps'}>Приложения</NavLink></Text>
 			</Header>
@@ -46,7 +45,7 @@ const router = createBrowserRouter(createRoutesFromElements(
 		<Route path='/' element={ <Navigate to="/nodes" /> }/>
 		<Route path='/nodes' element={<IndexPage />} />
 		<Route path='/resources' element={<ResoursesPage />} />
-		<Route path='/apps' element={<ResoursesPage />} />
+		<Route path='/apps' element={<AppsPage />} />
 	</Route>
 ));
 
