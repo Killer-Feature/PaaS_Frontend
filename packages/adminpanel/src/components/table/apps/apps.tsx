@@ -13,6 +13,8 @@ import AppsNet from '../../../network/apps';
 export type Apps = Array<{
     name: string,
     type: string,
+    age: string,
+    created: string,
 }>;
 
 const Resourses = () => {
@@ -26,9 +28,8 @@ const Resourses = () => {
         <div className={style.block + ' ' + resoursesStyle.block}>
             <div className={style.head + ' ' + style.border}><Text type={'tableHead'}>Название</Text></div>
             <div className={style.head + ' ' + style.border}><Text type={'tableHead'}>Статус</Text></div>
-            <div className={style.head + ' ' + style.border}><Text type={'tableHead'}>Последний деплой</Text></div>
-            <div className={style.head + ' ' + style.border}><Text type={'tableHead'}>Первый деплой</Text></div>
-            <div className={style.head + ' ' + style.border}></div>
+            <div className={style.head + ' ' + style.border}><Text type={'tableHead'}>Создан</Text></div>
+            <div className={style.head + ' ' + style.border}><Text type={'tableHead'}>Продолжительность работы</Text></div>
 
             {data.length === 0 &&
                 <div className={style.empty}>
@@ -62,12 +63,12 @@ const Resourses = () => {
                         </div>
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line}>
                             <Text type={'tableDesc'}>
-                                {}
+                                {el.created}
                             </Text>
                         </div>
                         <div className={((i !== data.length - 1) ? style.border : '') + ' ' + style.line}>
                             <Text type={'tableDesc'}>
-                                {}
+                                {el.age}
                             </Text>
                         </div>
                     </>
