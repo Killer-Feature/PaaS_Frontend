@@ -7,16 +7,17 @@ type Props = {
     icon: string,
     data: string,
     desc: string,
+    format?: string,
 };
 
-const TechData: React.FC<Props> = ({type, icon, data, desc}) => {
+const TechData: React.FC<Props> = ({type, icon, data, desc, format}) => {
     return (
         <div className={style.block + ' ' + style['block' + type]}>
             <div className={style.icon + ' ' + style['icon' + type]}>
                 <img src={icon} />
             </div>
             <div className={style.text}>
-                <Text type={'title'}>{data}</Text>
+                <Text type={'title'}>{data}<span className={style.format}>{format}</span></Text>
                 <Text type={'techDesc'}>{desc}</Text>
             </div>
         </div>

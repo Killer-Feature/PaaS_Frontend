@@ -1,14 +1,14 @@
 import {makeAutoObservable} from 'mobx';
 
 export type MonitoringType = {
-    CpuTotal: Number,
-    CpuUsage: Number,
-    MemoryTotal: Number,
-    MemoryUsage: Number,
-    NetworkReceive: Number,
-    NetworkTransmit: Number,
-    RamTotal: Number,
-    RamUsage: Number,
+    CpuTotal: number,
+    CpuUsage: number,
+    MemoryTotal: number,
+    MemoryUsage: number,
+    NetworkReceive: number,
+    NetworkTransmit: number,
+    RamTotal: number,
+    RamUsage: number,
 };
 
 class MonitoringStore {

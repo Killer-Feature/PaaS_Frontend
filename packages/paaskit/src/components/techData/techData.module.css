@@ -68,3 +68,12 @@
 .text {
     text-align: center;
 }
+
+.format {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    color: #101828;
+}
