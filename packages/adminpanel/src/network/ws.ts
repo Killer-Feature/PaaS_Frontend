@@ -6,6 +6,7 @@ import ResoursesStore from '../models/resourses';
 enum WSMsg {
     addNodeToCluster = 'addNodeToCluster',
     removeNodeFromCluster = 'removeNodeFromCluster',
+    monitoring = 'Metrics',
 };
 
 enum Status {
@@ -42,6 +43,7 @@ class WS {
     private handleFunc: Record<WSMsg, (arg0: any) => void> = {
         [WSMsg.addNodeToCluster]: this.handleAddClusterToNode.bind(this),
         [WSMsg.removeNodeFromCluster]: this.handleRemoveNodeFromCluster.bind(this),
+        [WSMsg.monitoring]: this.handleMonitoring.bind(this),
     };
 
     constructor() {
@@ -141,6 +143,19 @@ class WS {
             progress: undefined,
             theme: 'light',
         });
+    }
+
+    private handleMonitoring(data: {
+        CpuTotal: Number,
+        CpuUsage: Number,
+        MemoryTotal: Number,
+        MemoryUsage: Number,
+        NetworkReceive: Number,
+        NetworkTransmit: Number,
+        RamTotal: Number,
+        RamUsage: Number,
+    }) {
+        
     }
 };
 
