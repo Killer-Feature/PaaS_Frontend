@@ -1,7 +1,9 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { MonitoringType } from '../models/monitoring';
 import NodesStore from '../models/nodes';
 import ResoursesStore from '../models/resourses';
+import MonitoringStore from '../models/monitoring';
 
 enum WSMsg {
     addNodeToCluster = 'addNodeToCluster',
@@ -145,17 +147,8 @@ class WS {
         });
     }
 
-    private handleMonitoring(data: {
-        CpuTotal: Number,
-        CpuUsage: Number,
-        MemoryTotal: Number,
-        MemoryUsage: Number,
-        NetworkReceive: Number,
-        NetworkTransmit: Number,
-        RamTotal: Number,
-        RamUsage: Number,
-    }) {
-        
+    private handleMonitoring(data: MonitoringType) {
+        MonitoringStore.set(data);
     }
 };
 
