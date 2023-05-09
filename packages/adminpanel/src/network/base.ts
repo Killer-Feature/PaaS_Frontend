@@ -20,7 +20,7 @@ axios.interceptors.response.use((res) => res, (error) => {
         });
     }
 
-    if (error.status === 401) {
+    if (error.response.status === 401) {
         redirect('/login');
     }
 
