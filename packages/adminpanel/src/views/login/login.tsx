@@ -49,7 +49,7 @@ const Login = () => {
                                 <Text type={'errorMsg'}>Это обязятельное для ввода поле</Text>
                             )}
                             {errors?.user?.type === 'invalidInput' && (
-                                <Text type={'errorMsg'}>Не правильный логин или пароль</Text>
+                                <Text type={'errorMsg'}>Неправильный логин или пароль</Text>
                             )}
                         </div>
 
@@ -62,7 +62,7 @@ const Login = () => {
                                 <Text type={'errorMsg'}>Это обязятельное для ввода поле</Text>
                             )}
                             {errors?.password?.type === 'invalidInput' && (
-                                <Text type={'errorMsg'}>Не правильный логин или пароль</Text>
+                                <Text type={'errorMsg'}>Неправильный логин или пароль</Text>
                             )}
                         </div>
                         
