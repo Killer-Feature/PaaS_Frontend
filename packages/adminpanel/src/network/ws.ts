@@ -49,6 +49,10 @@ class WS {
     };
 
     constructor() {
+        this.start();
+    }
+
+    private start() {
         if (!!axios.defaults.baseURL) {
             this.socket = new WebSocket(`ws${axios.defaults.baseURL.replace('http', '')}/getProgress`);
 
@@ -57,15 +61,11 @@ class WS {
             this.socket.onmessage = this.msg.bind(this);
             this.socket.onerror = (err) => {
                 console.log('Люто наошибались в вебсокете: ', err);
-                if (!!axios.defaults.baseURL) {
-                    this.socket = new WebSocket(`ws${axios.defaults.baseURL.replace('http', '')}/getProgress`);
-                }
+                this.start();
             };
             this.socket.onclose = (err) => {
                 console.log('Люто назакрывали в вебсокет: ', err);
-                if (!!axios.defaults.baseURL) {
-                    this.socket = new WebSocket(`ws${axios.defaults.baseURL.replace('http', '')}/getProgress`);
-                }
+                this.start();
             };
         }
     }

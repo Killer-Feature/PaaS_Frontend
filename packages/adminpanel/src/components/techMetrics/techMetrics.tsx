@@ -13,12 +13,16 @@ const formatMsg = (msg: string | Number) => {
     return String(msg).slice(0, 4);
 }
 
+const bitToKb = (number: number | string) => {
+    return formatMsg(Number(number) * 1.25 * Math.pow(10, -3));
+}
+
 const bitToMb = (number: number | string) => {
-    return Math.round(Number(number) * 1.25 * Math.pow(10, -7));
+    return Math.round(Number(number) * 1.25 * Math.pow(10, -6));
 }
 
 const bitToGb = (number: number | string) => {
-    return formatMsg(Number(number) * 1.25 * Math.pow(10, -10));
+    return formatMsg(Number(number) * 1.25 * Math.pow(10, -9));
 }
 
 const TechMetrics = observer(() => {
@@ -55,8 +59,9 @@ const TechMetrics = observer(() => {
             <TechData
                 type='Aqua'
                 icon={internet}
-                data={bitToMb(MonitoringStore.monitoring.NetworkTransmit + MonitoringStore.monitoring.NetworkReceive)}
+                data={bitToKb(MonitoringStore.monitoring.NetworkTransmit + MonitoringStore.monitoring.NetworkReceive)}
                 desc={'Сетевая нагрузка'}
+                format={'KB'}
             />
         </div> 
     );

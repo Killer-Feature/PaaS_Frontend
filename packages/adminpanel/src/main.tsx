@@ -16,6 +16,7 @@ import {observer} from 'mobx-react-lite';
 import './network/base';
 import './network/ws';
 import 'react-toastify/dist/ReactToastify.css';
+import Login from './views/login/login';
 
 const App = observer(() => {
 	return (
@@ -41,11 +42,14 @@ const App = observer(() => {
 });
 
 const router = createBrowserRouter(createRoutesFromElements(
-	<Route path='/' element={<App />} >
-		<Route path='/' element={ <Navigate to="/nodes" /> }/>
-		<Route path='/nodes' element={<IndexPage />} />
-		<Route path='/resources' element={<ResoursesPage />} />
-		<Route path='/apps' element={<AppsPage />} />
+	<Route path='/'>
+		<Route path='/login' element={<Login />} />
+		<Route path='/' element={<App />} >
+			<Route path='/' element={ <Navigate to="/nodes" /> }/>
+			<Route path='/nodes' element={<IndexPage />} />
+			<Route path='/resources' element={<ResoursesPage />} />
+			<Route path='/apps' element={<AppsPage />} />
+		</Route>
 	</Route>
 ));
 

@@ -71,7 +71,7 @@ const Table = observer(() => {
                             {(el.grafana_ip !== '') ?
                                 <a className={style.link} href={el.grafana_ip} target={'_blank'}>
                                     <Text type={'tableDesc'}>
-                                        {el.grafana_ip.slice(0, 30) + '...'}
+                                        {el.grafana_ip?.slice(0, 30) + '...'}
                                     </Text>
                                 </a>
                                 :
