@@ -55,7 +55,8 @@ const ConfigModal = () => {
             </div>
             <div className={style.desc + ' ' + configStyle.desc}>
                 <Text type={'tableDesc'}>
-                    В этом модальном окне можно посмотреть и скопировать конфиг развернутого кластера
+                С помощью конфигурационного файла и утилиты kubectl Вы можете выполнять весь спектр операций по управлению кластером Kubernetes из командной строки.
+                Подробнее в официальной документации <a href={'https://kubernetes.io/docs/reference/kubectl/'}>Kubernetes</a>.
                 </Text>
             </div>
             <div className={configStyle.hr}></div>
