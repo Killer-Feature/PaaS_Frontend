@@ -17,14 +17,23 @@ import './network/base';
 import './network/ws';
 import 'react-toastify/dist/ReactToastify.css';
 import Login from './views/login/login';
+import LoginNet from './network/user';
+import { useNavigate } from 'react-router-dom';
+import Logout from './assets/logout.svg';
 
 const App = observer(() => {
+    const navigate = useNavigate();
+
 	return (
 		<>
 			<Header>
 				<Text type='menu'><NavLink className={style.menu} to={'/nodes'}>Главная</NavLink></Text>
 				<Text type='menu'><NavLink className={style.menu} to={'/resources'}>Ресурсы</NavLink></Text>
 				<Text type='menu'><NavLink className={style.menu} to={'/apps'}>Приложения</NavLink></Text>
+				<Button isSec callback={() => {
+					LoginNet.logout();
+					navigate('/login');
+				}}><img src={Logout} /></Button>
 			</Header>
 			<div className={
 				((ModalState.state === State.Opening) ? style.modalOpening : '')
