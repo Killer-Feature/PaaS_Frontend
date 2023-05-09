@@ -1,5 +1,6 @@
 import axios from 'axios';
 import { toast } from 'react-toastify';
+import { redirect } from "react-router-dom";
 
 axios.defaults.baseURL = document.location.origin.replace(':5173', ':8090') + '/api';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
@@ -17,6 +18,10 @@ axios.interceptors.response.use((res) => res, (error) => {
             progress: undefined,
             theme: 'light',
         });
+    }
+
+    if (error.status === 401) {
+        redirect('/login');
     }
 
     return Promise.reject(error);

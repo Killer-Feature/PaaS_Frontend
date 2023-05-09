@@ -5,20 +5,30 @@ import svgArrow from '../../assets/smartArrow.svg';
 import svgSignIn from '../../assets/signin.svg';
 import {Text, Button} from 'paaskit';
 import { useForm } from 'react-hook-form';
+import LoginNet from '../../network/user';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
     const {
         register,
         handleSubmit,
-        watch,
+        setError,
         formState: { errors }
     } = useForm();
 
-    // @ts-ignore
-    const onSubmit = (data) => {
-        // ResourseStore.addResourse(data);
+    const navigate = useNavigate();
 
-        // ModalState.close();
+    // @ts-ignore
+    const onSubmit = async (data) => {
+        try {  
+            await LoginNet.signIn(data);
+        } catch (err) {
+            setError('password', {type: 'invalidInput'});
+            setError('user', {type: 'invalidInput'});
+            return;
+        }
+
+        navigate('/');
     };
 
     return (
@@ -31,22 +41,28 @@ const Login = () => {
 
                     <form className={style.form} onSubmit={handleSubmit(onSubmit)}>
                         <Text type={'formLabel'}>Имя пользователя</Text>
-                        <input className={style.input + (errors.name ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'Имя пользователя на сервере'} {...register('login', {
+                        <input className={style.input + (errors.user ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'Имя пользователя на сервере'} {...register('user', {
                             required: true,
                         })} />
                         <div className={style.errorBlock}>
-                            {errors?.login?.type === 'required' && (
+                            {errors?.user?.type === 'required' && (
                                 <Text type={'errorMsg'}>Это обязятельное для ввода поле</Text>
+                            )}
+                            {errors?.user?.type === 'invalidInput' && (
+                                <Text type={'errorMsg'}>Не правильный логин или пароль</Text>
                             )}
                         </div>
 
                         <Text type={'formLabel'}>Пароль</Text>
-                        <input type='password' className={style.input + (errors.name ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'Пароль от SSH'} {...register('password', {
+                        <input type='password' className={style.input + (errors.password ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'Пароль от SSH'} {...register('password', {
                             required: true,
                         })} />
                         <div className={style.errorBlock}>
                             {errors?.password?.type === 'required' && (
                                 <Text type={'errorMsg'}>Это обязятельное для ввода поле</Text>
+                            )}
+                            {errors?.password?.type === 'invalidInput' && (
+                                <Text type={'errorMsg'}>Не правильный логин или пароль</Text>
                             )}
                         </div>
                         
