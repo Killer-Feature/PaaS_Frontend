@@ -50,6 +50,10 @@
 }
 
 .menu:visited {
+    color: #475467;
+}
+
+.menu:visited {
     color: unset;
 }
 

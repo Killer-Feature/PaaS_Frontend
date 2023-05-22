@@ -2550,6 +2550,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["paaskit", "virtual:e142fcfd6fe225630b849f1e4afa85fd5d01e2486fb12a1d58db8deb64eb78a8c66c171da560d2c623cce9329efa588bc3a57aa7c0e3132df81c2dd4f743b42a#workspace:packages/paaskit"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:e142fcfd6fe225630b849f1e4afa85fd5d01e2486fb12a1d58db8deb64eb78a8c66c171da560d2c623cce9329efa588bc3a57aa7c0e3132df81c2dd4f743b42a#npm:18.2.0"],\
+            ["react-hook-form", "virtual:e142fcfd6fe225630b849f1e4afa85fd5d01e2486fb12a1d58db8deb64eb78a8c66c171da560d2c623cce9329efa588bc3a57aa7c0e3132df81c2dd4f743b42a#npm:7.43.9"],\
             ["react-notifications", "npm:1.7.4"],\
             ["react-notifications-component", "virtual:16d462ecd201df1e9242a5325c64f6b1d184e4e5e5c0ccce531e3f0116f4d41aa2a32a4a7e490886d7e25193c91289f20764712151e9f406951fe13ce34cf059#npm:4.0.1"],\
             ["typescript", "patch:typescript@npm%3A4.9.5#~builtin<compat/typescript>::version=4.9.5&hash=23ec76"],\

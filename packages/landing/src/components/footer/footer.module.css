@@ -1,0 +1,12 @@
+.block {
+    background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.text {
+    width: 100%;
+    max-width: var(--size_width-max);
+}

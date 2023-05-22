@@ -1,0 +1,52 @@
+.bigBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 0;
+}
+.h1 {
+    font-size: 100px;
+    margin: 0;
+    line-height: 90px;
+}
+.span {
+    font-size: 60px;
+    line-height: 60px;
+    display: inline;
+}
+.p {
+    margin: 0 0 20px;
+    font-weight: bold;
+    font-size: 18px;
+}
+.block {
+    width: 600px;
+    height: 20px;
+    background: #eaecf0;
+    border-radius: 20px;
+    position: relative;
+}
+
+.lizard {
+    --line-size: 9px;
+    background: repeating-linear-gradient(
+      -45deg,
+      #7f56d9 0 var(--line-size),
+      #9e77ed var(--line-size) calc(var(--line-size) * 2)
+    );
+    background-size: calc(var(--line-size) / 0.70710678 * 2) 100%;
+    background-repeat: repeat-x;
+    position: absoluite;
+    height: 100%;
+    border-radius: 20px;
+    animation: Move 100s linear infinite;
+    transition: 1s linear;
+}
+  
+@keyframes Move {
+    100% {
+        background-position-x: 3500px;
+    }
+}
+  

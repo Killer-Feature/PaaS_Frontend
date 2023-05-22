@@ -5,9 +5,12 @@ import svg from '../../../assets/createNode.svg';
 import ModalState from '../../../models/modal';
 import React from 'react';
 import ConfigNet from '../../../network/config';
-import { LightAsync as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { anOldHope } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { Light as SyntaxHighlighter } from 'react-syntax-highlighter';
+import yaml from 'react-syntax-highlighter/dist/esm/languages/hljs/yaml';
+import anOldHope from 'react-syntax-highlighter/dist/esm/styles/hljs/an-old-hope';
 import { toast } from 'react-toastify';
+
+SyntaxHighlighter.registerLanguage('yaml', yaml);
 
 const ConfigModal = () => {
     const [config, setConfig] = React.useState('');
