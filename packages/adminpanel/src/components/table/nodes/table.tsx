@@ -114,7 +114,6 @@ const Table = observer(() => {
                                     });
                                 }
                             }} src={trash} />
-                            <img src={pan} />
                         </div>
                     </>
                 );

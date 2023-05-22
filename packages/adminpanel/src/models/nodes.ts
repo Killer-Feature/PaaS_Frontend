@@ -54,15 +54,23 @@ class NodesStore {
 
         if (!!node) {
             node.clusterID = 0;
+            node.isMaster = false;
+            node.grafana_ip = '';
         }
     }
 
     async addNodeToCluster(id: number)  {
         const clusetId = await NodesNet.addNodeToCluster(id);
 
+        
+
         this.nodes.forEach((el) => {
             if (el.id === id) {
                 el.clusterID = clusetId;
+
+                if (this.nodes.some((el) => el.isMaster)) {
+                    el.isMaster = true;
+                }
             };
         });
     }

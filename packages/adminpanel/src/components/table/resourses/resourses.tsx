@@ -71,7 +71,6 @@ const Resourses = observer(() => {
                                 name: 'ресурс',
                                 description: 'Это действие безвозвратно удалит ресурс из базы данных и из кластера'
                             })} src={trash} />
-                            <img src={pan} />
                         </div>
                     </>
                 );
