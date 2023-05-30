@@ -7,3 +7,4 @@
 !.yarn/versions
 .vscode/*
 !.vscode/extensions.json
+.DS_store
