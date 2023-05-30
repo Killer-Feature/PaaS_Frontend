@@ -5,9 +5,8 @@ import { Store } from 'react-notifications-component';
 import { useForm } from 'react-hook-form';
 import Loader from '../loader/loader';
 
-
 const SSHForm: React.FunctionComponent = () => {
-    const [isDeploed, setDeploy] = React.useState(false);
+    const [isDeploed, setDeploy] = React.useState('');
 
     const {
         register,
@@ -67,7 +66,7 @@ const SSHForm: React.FunctionComponent = () => {
             <Text type='h2'>Введите данные для подключения по SSH к Вашему серверу и разверните нашу систему</Text>
             <Text type='pDesc'>Наши сервера в автоматическом режиме подключатся по SSH к Вашему серверу и установят последнюю версию нашего Control-plane, предоставив Вам готовый к использованию сервис</Text>
 
-            {!!isDeploed ?
+            {!isDeploed ?
                 <form className={style.form2} onSubmit={handleSubmit(onSubmit)}>
                     <Text type={'formLabel'}>IP адрес</Text>
                     <input className={style.input + (errors.ip ? (' ' + style.errorInput) : '')} autoComplete={'off'} placeholder={'192.168.0.0'} {...register('ip', {
@@ -127,7 +126,7 @@ const SSHForm: React.FunctionComponent = () => {
                     <input type="submit" style={{display: 'none'}} />
                 </form>
             :
-                <Loader />
+                <Loader ip={isDeploed} />
             }
         </div>
     );

@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 100px 0;
+    margin: 140px 0;
 }
 .h1 {
     font-size: 100px;
@@ -49,4 +49,8 @@
         background-position-x: 3500px;
     }
 }
-  
+
+.deployed {
+    max-width: 600px;
+    text-align: center;
+}
